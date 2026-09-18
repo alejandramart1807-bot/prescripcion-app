@@ -1,23 +1,24 @@
-// Placeholder de la migración de Tinterno al monorepo.
-// El contenido clínico y la lógica de la app todavía viven en /index.html (raíz).
-// Este componente se reemplaza a medida que @tinterno/content y @tinterno/engine
-// se integran aquí. No se debe tocar el index.html de la raíz durante la migración.
+import { useHashRoute } from "./lib/useHashRoute";
+import HomePage from "./pages/HomePage";
+import CalculatorPage from "./pages/CalculatorPage";
+
+// Migración de Tinterno al monorepo. Esta app hoy solo renderiza las
+// calculadoras (#/calc/:id); el resto de fichas y tablas sigue en index.html
+// (raíz) hasta que se migren. No tocar index.html de la raíz.
 export default function App() {
+  const route = useHashRoute();
+
   return (
-    <main
-      style={{
-        display: "grid",
-        placeItems: "center",
-        minHeight: "100dvh",
-        fontFamily: "system-ui, sans-serif",
-        textAlign: "center",
-        padding: "24px",
-      }}
-    >
-      <div>
-        <h1>Tinterno — migración en curso</h1>
-        <p>Esta es la nueva base en apps/web. La app en producción sigue siendo index.html.</p>
-      </div>
-    </main>
+    <div className="app-shell">
+      <header className="hdr">
+        <div className="hdr-in">
+          <a className="logo" href="#/">
+            <b>Tinterno</b>
+            <small>Calculadoras</small>
+          </a>
+        </div>
+      </header>
+      <main id="main">{route.name === "calc" ? <CalculatorPage id={route.id} /> : <HomePage />}</main>
+    </div>
   );
 }

@@ -4,7 +4,17 @@
     "jsx": "react-jsx",
     "useDefineForClassFields": true,
     "noEmit": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    // @tinterno/content y @tinterno/engine se consumen desde su código fuente
+    // (workspace:*, sin paso de build), con specifiers que terminan en ".ts"
+    // -> hace falta lo mismo que ya declara packages/content/tsconfig.json.
+    "allowImportingTsExtensions": true,
+    // calcForm.compute de las 51 calculadoras se preserva byte a byte desde
+    // index.html (ver packages/content/tsconfig.json) y usa variables/subfunciones
+    // sin anotar; como no hay project references, ese código se type-checkea
+    // aquí con las opciones de apps/web, así que se relaja lo mismo que ya
+    // relaja el propio paquete de contenido. El resto de "strict" sigue activo.
+    "noImplicitAny": false
   },
   "include": ["src", "vite.config.ts"]
 }
