@@ -346,6 +346,37 @@ h2.sec{font-size:1.12rem;margin:0 0 var(--s3);display:flex;align-items:center;ga
 .modepill{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;border-radius:999px;padding:3px 10px;border:1px solid var(--border);background:var(--surface);color:var(--brand);cursor:pointer;min-height:28px}
 .mswitch button span{white-space:nowrap}
 @media (max-width:380px){.mswitch button{font-size:.84rem;gap:4px}}
+.xlinks{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.xlink{display:inline-flex;align-items:center;gap:6px;min-height:36px;color:var(--accent);font-weight:700;text-decoration:none;line-height:1.3}
+.xlink:hover{text-decoration:underline}.xlink .ico{flex:none}
+.xlink.primary{background:var(--accent-soft);color:var(--brand);border-radius:var(--r-sm);padding:6px 10px;align-self:flex-start}
+.xlink.sub{font-weight:400;font-size:.88rem}
+.xl-list{list-style:none;margin:6px 0 0;padding:0}
+.xl-list li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px;padding:8px 0;border-bottom:1px solid var(--border)}
+.xl-list li:last-child{border-bottom:0}.xl-list li>span:first-child{color:var(--text)}
+.xl-a{display:flex;gap:12px;flex-wrap:wrap}
+.acct.on{color:var(--brand)}
+.tabs{display:flex;gap:4px;padding:4px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;margin:0 0 var(--s3);max-width:420px}
+.tabs button{flex:1;min-height:40px;border:0;border-radius:9px;background:transparent;font-weight:700;color:var(--text-2);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--brand);outline:1px solid var(--border)}
+.authf{padding:16px;display:grid;gap:6px;max-width:420px}
+.authf label:not(.cf-chk),#sugF label{font-weight:700;font-size:.9rem;margin-top:6px;display:block}
+.authf input:not([type=checkbox]),#sugF input,#sugF select,#sugF textarea,.note-ta,.rev-a input,.rev-a select{width:100%;min-height:var(--ctl);border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);padding:8px 10px;font:inherit;font-size:16px}
+#sugF textarea,.note-ta{min-height:110px;resize:vertical}
+.authf .btn{margin-top:8px}
+.warnline{display:flex;gap:6px;align-items:flex-start;font-size:.85rem;color:var(--amber);margin:8px 0 0}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 var(--s3)}
+.chips button{min-height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface);cursor:pointer;font-weight:700;color:var(--text-2)}
+.chips button[aria-selected="true"]{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.rev{padding:14px 16px;margin:0 0 var(--s3)}
+.rev-h{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}.rev-h a{text-decoration:none;color:var(--text)}
+.rev-b{white-space:pre-wrap;margin:8px 0}
+.rev-a{display:grid;grid-template-columns:1fr;gap:8px}@media (min-width:720px){.rev-a{grid-template-columns:180px 1fr auto}}
+.st{display:inline-block;font-size:.75rem;font-weight:700;border-radius:6px;padding:2px 8px;background:var(--surface-2);color:var(--text-2)}
+.st-nueva{background:var(--accent-soft);color:var(--brand)}.st-en_revision{background:var(--amber-soft);color:var(--amber)}
+.st-aceptada,.st-implementada{background:var(--green-soft);color:var(--green)}.st-rechazada{background:var(--red-soft);color:var(--red)}
+@media (max-width:400px){#themeBtn{display:none}}
+.toast{width:max-content}
 </style>
 </head>
 <body>
@@ -355,8 +386,9 @@ h2.sec{font-size:1.12rem;margin:0 0 var(--s3);display:flex;align-items:center;ga
     <button class="icon-btn only-desk" id="sbToggle" aria-label="Mostrar u ocultar la barra lateral" aria-controls="sidebar" aria-expanded="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg></button>
     <a class="logo" href="#" aria-label="Tinterno, ir al inicio"><span id="logoSlot"></span><span><b>Tinterno</b><small>Guía clínica para el turno</small></span></a>
     <div class="gsearch" role="search"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label class="vh" for="q">Buscar en Tinterno</label><input id="q" type="search" autocomplete="off" placeholder="Buscar diagnóstico, fármaco o escala…"><button class="clr" id="qClr" data-for="q" aria-label="Limpiar búsqueda"><svg class="ico sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button><kbd aria-hidden="true">/</kbd></div>
-    <button class="pt-btn noval" id="ptBtn"><svg class="ico sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span id="ptLbl">Paciente · sin peso</span></button>
+    <button class="pt-btn noval" id="ptBtn"><svg class="ico sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14M5 7 2 14a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg><span id="ptLbl">Paciente · sin peso</span></button>
     <button class="icon-btn only-desk" id="favBtn" aria-label="Favoritos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5L2.6 9.6l6.5-.9z"/></svg></button>
+    <button class="icon-btn acct" id="acctBtn" aria-label="Ingresar o crear cuenta"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button>
     <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema"></button>
     <button class="icon-btn" id="menuBtn" aria-label="Más opciones" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="12" cy="19" r="1.2"/></svg></button>
   </div>
@@ -380,6 +412,10 @@ h2.sec{font-size:1.12rem;margin:0 0 var(--s3);display:flex;align-items:center;ga
 <div class="dlg" id="menuDlg" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
   <h2 id="menuTitle">Opciones<button class="icon-btn x" data-close aria-label="Cerrar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></h2>
   <div id="menuBody"></div>
+</div>
+<div class="dlg" id="sugDlg" role="dialog" aria-modal="true" aria-labelledby="sugTitle" hidden>
+  <h2 id="sugTitle"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 17-6v14L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Sugerir corrección<button class="icon-btn x" data-close aria-label="Cerrar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></h2>
+  <div id="sugBody"></div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
@@ -3718,7 +3754,7 @@ DX.forEach(d=>{if(d.calcForm||d.rows)return;const g=GUIDES[d.id]||d.g;if(!g){d.p
 (()=>{const order=['Admisión del paciente grave','Escalas y calculadoras','Valores de referencia','Analgesia','Anestesiología','Cardiología','Cirugía general y trauma','Coloproctología','Dermatología','Endocrinología','Gastroenterología y hepatología','Ginecología','Obstetricia','Hematología','Infectología','Nefrología','Neumología','Neurología','Oftalmología','Oncología','Ortopedia y reumatología','Otorrinolaringología','Pediatría','Psiquiatría','Salud mental (hospital psiquiátrico)','Urología (Uroclin)','Causas externas','Profilaxis','Paciente crítico','Medicina interna (piso y consulta)'];DX.sort((a,b)=>order.indexOf(a.sys||'Cardiología')-order.indexOf(b.sys||'Cardiología'));})();
 /* ================= TINTERNO UI v7 ================= */
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const REV="sep. 2026", REV_LONG="17 de septiembre de 2026", VERSION="7.2";
+const REV="sep. 2026", REV_LONG="17 de septiembre de 2026", VERSION="7.5";
 let current=null;
 const fmt=(n,d=1)=>{const r=Math.round(n*Math.pow(10,d))/Math.pow(10,d);return r.toLocaleString("es-CO",{maximumFractionDigits:d})};
 const norm=s=>String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
@@ -3779,13 +3815,13 @@ function updatePt(){const b=$("#ptBtn");if(!b)return;b.classList.toggle("noval",
 const MAC=[
  {k:"cardio",n:"Cardiovascular"},{k:"resp",n:"Respiratorio"},{k:"neuro",n:"Neurológico"},{k:"renal",n:"Renal y electrolitos"},
  {k:"dig",n:"Digestivo y hepatología"},{k:"endo",n:"Endocrino y metabólico"},{k:"infecto",n:"Infectología"},{k:"hemo",n:"Hematología y oncología"},
- {k:"cx",n:"Cirugía y trauma"},{k:"mujer",n:"Mujer y embarazo"},{k:"ped",n:"Pediatría"},{k:"mental",n:"Salud mental"},
+ {k:"cx",n:"Cirugía y trauma"},{k:"uro",n:"Urología"},{k:"mujer",n:"Mujer y embarazo"},{k:"ped",n:"Pediatría"},{k:"mental",n:"Salud mental"},
  {k:"piel",n:"Piel y tejidos blandos"},{k:"otras",n:"Otras especialidades"}];
-const SYSMAC={"Cardiología":"cardio","Neumología":"resp","Neurología":"neuro","Nefrología":"renal","Gastroenterología y hepatología":"dig","Endocrinología":"endo","Infectología":"infecto","Profilaxis":"infecto","Hematología":"hemo","Oncología":"hemo","Cirugía general y trauma":"cx","Ortopedia y reumatología":"cx","Urología (Uroclin)":"cx","Coloproctología":"cx","Otorrinolaringología":"cx","Oftalmología":"cx","Ginecología":"mujer","Obstetricia":"mujer","Pediatría":"ped","Psiquiatría":"mental","Salud mental (hospital psiquiátrico)":"mental","Dermatología":"piel","Causas externas":"otras","Analgesia":"otras","Anestesiología":"otras","Admisión del paciente grave":"otras"};
+const SYSMAC={"Cardiología":"cardio","Neumología":"resp","Neurología":"neuro","Nefrología":"renal","Gastroenterología y hepatología":"dig","Endocrinología":"endo","Infectología":"infecto","Profilaxis":"infecto","Hematología":"hemo","Oncología":"hemo","Cirugía general y trauma":"cx","Ortopedia y reumatología":"cx","Urología (Uroclin)":"uro","Coloproctología":"cx","Otorrinolaringología":"cx","Oftalmología":"cx","Ginecología":"mujer","Obstetricia":"mujer","Pediatría":"ped","Psiquiatría":"mental","Salud mental (hospital psiquiátrico)":"mental","Dermatología":"piel","Causas externas":"otras","Analgesia":"otras","Anestesiología":"otras","Admisión del paciente grave":"otras"};
 const MIMAC={"Cardiovascular":"cardio","Respiratorio":"resp","Digestivo":"dig","Endocrino":"endo","Nefro y LEV":"renal","Hematología":"hemo","Infectología":"infecto","Reumatología":"cx"};
 const CRITMAC={"Sepsis":"infecto","Vía aérea y ventilación":"resp","Paro cardiorrespiratorio":"cardio","Guías rápidas":"otras"};
 const CALCMAC={"Neurología":"neuro","Salud mental":"mental","Cardiovascular":"cardio","Respiratorio e infecciones":"resp","Digestivo":"dig","Riñón y electrolitos":"renal"};
-const CALCID={"c-apgar":"ped","c-westley":"ped","c-bishop":"mujer","c-eg":"mujer","c-ipss":"cx","c-ottawa":"cx","c-padua":"cardio","c-lrinec":"piel","c-alvarado":"cx","c-centor":"resp","c-holliday":"ped","c-parkland":"cx"};
+const CALCID={"c-apgar":"ped","c-westley":"ped","c-bishop":"mujer","c-eg":"mujer","c-ipss":"uro","c-ottawa":"cx","c-padua":"cardio","c-lrinec":"piel","c-alvarado":"cx","c-centor":"resp","c-holliday":"ped","c-parkland":"cx"};
 const sysOf=d=>d.sys||"Cardiología";
 function macroOf(d){const s=sysOf(d);
   if(d.rows)return null;
@@ -3821,8 +3857,10 @@ const macName=k=>(MAC.find(m=>m.k===k)||{}).n||"";
 const inMac=k=>DX.filter(d=>TAX[d.id].mac===k);
 const inCtx=k=>k==="peso"?DX.filter(d=>TAX[d.id].kg):DX.filter(d=>TAX[d.id].ctx.has(k));
 const ctxName=k=>k==="peso"?"Prescripción por peso":(CTX.find(c=>c.k===k)||{}).n||"";
-function pathOf(d){if(d.calcForm)return [["ctx/calc","Calculadoras"],[null,d.group]];if(d.rows)return [["ctx/ref","Valores de referencia"],[null,d.group]];const m=TAX[d.id].mac;return [["cat/"+m,macName(m)],[null,TAX[d.id].sub]];}
-const metaLine=d=>d.calcForm?`Calculadora · ${d.group}`:d.rows?`Valores de referencia · ${d.group}`:`${TAX[d.id].sub} · ${d.group}`;
+const CALC_GROUP={"c-bishop":"Obstetricia","c-eg":"Obstetricia","c-apgar":"Pediatría","c-westley":"Pediatría","c-ipss":"Urología","c-ottawa":"Ortopedia","c-padua":"Tromboprofilaxis"};
+const grp=d=>(d.calcForm&&CALC_GROUP[d.id])||d.group;
+function pathOf(d){if(d.calcForm)return [["ctx/calc","Calculadoras"],[null,grp(d)]];if(d.rows)return [["ctx/ref","Valores de referencia"],[null,d.group]];const m=TAX[d.id].mac;return [["cat/"+m,macName(m)],[null,TAX[d.id].sub]];}
+const metaLine=d=>d.calcForm?`Calculadora · ${grp(d)}`:d.rows?`Valores de referencia · ${d.group}`:`${TAX[d.id].sub} · ${d.group}`;
 /* ---------- listas reutilizables ---------- */
 function rowItem(d,q){const nm=q?hl(d.name,q):esc(d.name);return `<li><a href="#${d.id}"><span class="t"><b>${nm}</b><small>${esc(metaLine(d))}</small></span>${isFav(d.id)?icFill("star","sm"):""}<span class="chev">${ic("right","sm")}</span></a></li>`;}
 const rows=(arr,q)=>arr.length?`<ul class="rows">${arr.map(d=>rowItem(d,q)).join("")}</ul>`:"";
@@ -3966,6 +4004,9 @@ function openMenu(){const d=current&&byId(current);
    <li><button data-m="share">${ic("share")} Compartir enlace</button></li>
    ${d.orders&&d.orders.length&&!d.calcForm?`<li><button data-m="ev">${ic("book")} Ver evidencia</button></li>`:""}
    <li><button data-m="print">${ic("print")} Imprimir</button></li>`:""}
+   ${d?`<li><button data-m="sug">${ic("mega")} Sugerir corrección</button></li>`:""}
+   <li><a href="#cuenta" data-m="nav">${ic("user")} ${USER?"Tu cuenta":"Ingresar o crear cuenta"}</a></li>
+   ${isStaff()?`<li><a href="#revision" data-m="nav">${ic("check")} Panel de revisión</a></li>`:""}
    <li><button data-m="pt">${ic("scale")} Peso del paciente</button></li>
    <li><button data-m="mode">${ic(MODE==="estudio"?"zap":"book")} ${MODE==="estudio"?"Cambiar a Búsqueda rápida":"Cambiar a modo Estudio"}</button></li>
    <li><a href="#repaso" data-m="nav">${ic("clock")} Repaso${dueList().length?` (${dueList().length})`:""}</a></li>
@@ -3976,7 +4017,7 @@ function openMenu(){const d=current&&byId(current);
    <li><a href="#acerca" data-m="nav">${ic("info")} Cómo funciona Tinterno</a></li></ul>`;
   $("#menuBody").onclick=e=>{const b=e.target.closest("[data-m]");if(!b)return;const m=b.dataset.m;
     if(m==="nav"){closeLayer(true);return;} closeLayer(true);
-    if(m==="fav")toggleFav(d.id);if(m==="share")shareLink(d);if(m==="print")doPrint();if(m==="pt")openPatient();if(m==="theme")cycleTheme();if(m==="clr")clearRecent();if(m==="mode")setMode(MODE==="estudio"?"turno":"estudio");
+    if(m==="fav")toggleFav(d.id);if(m==="share")shareLink(d);if(m==="print")doPrint();if(m==="pt")openPatient();if(m==="theme")cycleTheme();if(m==="clr")clearRecent();if(m==="mode")setMode(MODE==="estudio"?"turno":"estudio");if(m==="sug")openSuggest(d);
     if(m==="ev"){const ev=$("#sec-evidencia");if(ev){ev.querySelector("details").open=true;ev.scrollIntoView({behavior:"smooth"});}}};
   openLayerEl($("#menuDlg"));}
 function shareLink(d){const url=location.href.split("#")[0]+"#"+d.id;
@@ -3990,7 +4031,7 @@ function renderSidebar(){setTimeout(()=>bindModeSwitch($("#sidebar")),0);const s
   const li=x=>`<li><a href="#${x.id}" ${current===x.id?'aria-current="page"':""}>${esc(x.name)}</a></li>`;
   let h=`<h2>Favoritos</h2>${fav.length?`<ul class="nl">${fav.map(li).join("")}</ul>`:`<p class="sb-empty">Marca fichas con la estrella para tenerlas aquí.</p>`}`;
   if(rec.length)h+=`<h2>Recientes</h2><ul class="nl">${rec.map(li).join("")}</ul>`;
-  {const du=dueList().length;h+=`<h2>Modo</h2>${modeSwitchHTML()}<h2>Aprendizaje</h2><ul class="nl"><li><a href="#repaso" ${location.hash==="#repaso"?'aria-current="page"':""}>${ic("clock","sm")}Repaso<span class="cnt">${du||""}</span></a></li><li><a href="#aprendizaje" ${location.hash==="#aprendizaje"?'aria-current="page"':""}>${ic("target","sm")}Mi aprendizaje</a></li></ul>`;}
+  {const du=dueList().length;h+=`<h2>Modo</h2>${modeSwitchHTML()}<h2>Aprendizaje</h2><ul class="nl"><li><a href="#repaso" ${location.hash==="#repaso"?'aria-current="page"':""}>${ic("clock","sm")}Repaso<span class="cnt">${du||""}</span></a></li><li><a href="#aprendizaje" ${location.hash==="#aprendizaje"?'aria-current="page"':""}>${ic("target","sm")}Mi aprendizaje</a></li><li><a href="#cuenta" ${location.hash==="#cuenta"?'aria-current="page"':""}>${ic("user","sm")}${USER?"Tu cuenta":"Ingresar"}</a></li>${isStaff()?`<li><a href="#revision" ${location.hash==="#revision"?'aria-current="page"':""}>${ic("check","sm")}Panel de revisión</a></li>`:""}</ul>`;}
   h+=`<h2>Contextos</h2><ul class="nl">${CTX.map(c=>`<li><a href="#ctx/${c.k}" ${location.hash==="#ctx/"+c.k?'aria-current="page"':""}>${ic(c.i,"sm")}${c.n}<span class="cnt">${inCtx(c.k).length}</span></a></li>`).join("")}</ul>`;
   h+=`<h2>Sistemas</h2><ul class="nl">${MAC.map(m=>{const open=SB_OPEN===m.k;let inner="";
      if(open){inner=`<ul class="sub-nl">${subsOf(m.k).map(([s])=>`<li class="sh">${esc(s)}</li>${inMac(m.k).filter(x=>TAX[x.id].sub===s).map(li).join("")}`).join("")}</ul>`;}
@@ -4011,9 +4052,99 @@ function renderBnav(){const b=$("#bnav");const d=current&&byId(current);const h=
    <a href="#buscar" ${cur("#buscar")}>${ic("search")}<span>Buscar</span></a>
    <button id="bnEx">${ic("compass")}<span>Explorar</span></button>
    <a href="#favoritos" ${cur("#favoritos")}>${ic("star")}<span>Favoritos</span></a>
-   <button id="bnPt2" aria-label="Paciente">${ic("user")}<span>${KG>0?fmt(KG)+" kg":"Paciente"}</span></button>`;
+   <button id="bnPt2" aria-label="Peso del paciente">${ic("scale")}<span>${KG>0?fmt(KG)+" kg":"Peso"}</span></button>`;
   $("#bnEx").onclick=openExplore;$("#bnPt2").onclick=openPatient;}
 function syncFavUI(){renderBnav();const fb=$("#fFav");if(fb&&current){const on=isFav(current);fb.setAttribute("aria-pressed",on);fb.innerHTML=on?icFill("star"):ic("star");fb.setAttribute("aria-label",on?"Quitar de favoritos":"Agregar a favoritos");}}
+
+/* ================= ENLACES A GUÍAS (metadatos; no modifica el contenido clínico) ================= */
+/* Colombia: URL verificadas el 18-sep-2026. Si no hay documento verificado, se enlaza el portal oficial de GPC. */
+const CO_LINKS=[
+ [/toxicol/i,"https://minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/GT/guias-manejo-emergencias-toxicologicas-outpout.pdf","Guía de emergencias toxicológicas 2017 (PDF, MinSalud)"],
+ [/complicaciones del embarazo|código rojo/i,"https://unisalud.unal.edu.co/fileadmin/archivos/10-G.completa.Embarazo.Parto.2013.Julio17.pdf","GPC Embarazo, parto y puerperio 2013 · versión completa (PDF, Universidad Nacional)"],
+ [/coronario agudo/i,"https://www.quindio.gov.co/home/docs/items/item_196/GPC_Prof_Sal_SCA.pdf","GPC Síndrome coronario agudo 2013 · profesionales (PDF)"],
+ [/VIH/i,"https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/PP/ET/gpc-vih-adultos-version-profesionales-salud.pdf","GPC VIH/sida 2021 · profesionales (PDF, MinSalud)"],
+ [/3280/,"https://normograma.supersalud.gov.co/compilacion/docs/resolucion_minsaludps_3280_2018.htm","Resolución 3280 de 2018 (texto oficial, Supersalud)"],
+ [/Ley 1616/,"https://normograma.supersalud.gov.co/compilacion/docs/ley_1616_2013.htm","Ley 1616 de 2013 con modificaciones vigentes (Supersalud)"]];
+const GPC_PORTAL="https://gpc.minsalud.gov.co/SitePages/default.aspx";
+/* Internacional: página oficial de guías de cada organización */
+const ORG_LINKS=[
+ [/\bESC\b/,"https://www.escardio.org/Guidelines","ESC"],
+ [/\bESH\b/,"https://www.eshonline.org/guidelines/","ESH"],
+ [/AHA\/ASA|\bASA\b.*ACV|ACV.*\bASA\b/,"https://www.stroke.org/en/professionals/stroke-resource-library","AHA/ASA"],
+ [/\bAHA\b|\bACC\b/,"https://professional.heart.org/en/guidelines-and-statements","AHA/ACC"],
+ [/\bIDSA\b/,"https://www.idsociety.org/practice-guideline/practice-guidelines/","IDSA"],
+ [/\bKDIGO\b/,"https://kdigo.org/guidelines/","KDIGO"],
+ [/\bGINA\b/,"https://ginasthma.org/reports/","GINA"],
+ [/\bGOLD\b/,"https://goldcopd.org/","GOLD"],
+ [/\bADA\b/,"https://professional.diabetes.org/standards-of-care","ADA"],
+ [/\bEAU\b/,"https://uroweb.org/guidelines","EAU"],
+ [/\bAUA\b/,"https://www.auanet.org/guidelines-and-quality/guidelines","AUA"],
+ [/\bNICE\b/,"https://www.nice.org.uk/guidance","NICE"],
+ [/\bCDC\b/,"https://www.cdc.gov/std/treatment-guidelines/","CDC"],
+ [/\bOPS\b|\bPAHO\b/,"https://www.paho.org/es/documentos","OPS"],
+ [/\bOMS\b|\bWHO\b/,"https://www.who.int/publications/who-guidelines","OMS"],
+ [/Surviving Sepsis|\bSSC\b/,"https://www.sccm.org/survivingsepsiscampaign","Surviving Sepsis Campaign"],
+ [/\bACOG\b/,"https://www.acog.org/clinical","ACOG"],
+ [/\bFIGO\b/,"https://www.figo.org","FIGO"],
+ [/\bRCOG\b/,"https://www.rcog.org.uk/guidance/","RCOG"],
+ [/\bAABB\b/,"https://www.aabb.org","AABB"],
+ [/\bERC\b/,"https://cprguidelines.eu","ERC"],
+ [/\bATLS\b/,"https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/","ATLS (ACS)"],
+ [/\bWSES\b/,"https://www.wses.org.uk","WSES"],
+ [/\bBTS\b/,"https://www.brit-thoracic.org.uk","BTS"],
+ [/\bATS\b/,"https://www.thoracic.org","ATS"],
+ [/\bCHEST\b|\bACCP\b/,"https://www.chestnet.org","CHEST"],
+ [/\bEASL\b/,"https://easl.eu","EASL"],
+ [/\bAASLD\b/,"https://www.aasld.org","AASLD"],
+ [/\bACG\b/,"https://gi.org/guidelines/","ACG"],
+ [/\bAGA\b/,"https://gastro.org/clinical-guidance/","AGA"],
+ [/\bESGE\b/,"https://www.esge.com","ESGE"],
+ [/\bAPA\b/,"https://www.psychiatry.org/psychiatrists/practice/clinical-practice-guidelines","APA"],
+ [/\bCANMAT\b/,"https://www.canmat.org","CANMAT"],
+ [/\bAAP\b/,"https://publications.aap.org/pediatrics","AAP"],
+ [/\bASH\b/,"https://www.hematology.org","ASH"],
+ [/\bISTH\b/,"https://www.isth.org","ISTH"],
+ [/Endocrine Society|\bES\b 20/,"https://www.endocrine.org/clinical-practice-guidelines","Endocrine Society"],
+ [/\bATA\b/,"https://www.thyroid.org","ATA"],
+ [/\bNCCN\b/,"https://www.nccn.org/guidelines","NCCN"],
+ [/\bESMO\b/,"https://www.esmo.org/guidelines","ESMO"],
+ [/\bASCO\b/,"https://www.asco.org","ASCO"],
+ [/\bISPD\b/,"https://ispd.org","ISPD"],
+ [/\bEULAR\b/,"https://www.eular.org","EULAR"],
+ [/\bACR\b/,"https://rheumatology.org","ACR"],
+ [/\bASRA\b/,"https://www.asra.com","ASRA"],
+ [/\bESPGHAN\b/,"https://www.espghan.org","ESPGHAN"],
+ [/\bESICM\b/,"https://www.esicm.org","ESICM"],
+ [/\bSCCM\b/,"https://www.sccm.org","SCCM"],
+ [/\bBAD\b/,"https://www.bad.org.uk","BAD"],
+ [/\bAAN\b/,"https://www.aan.com/practice/guidelines","AAN"],
+ [/\bILAE\b/,"https://www.ilae.org","ILAE"],
+ [/\bAAO\b/,"https://www.aao.org","AAO"],
+ [/\bASA 20\d\d\b|\bASA\b.*ayuno/,"https://www.asahq.org/standards-and-practice-parameters","ASA (anestesiología)"],
+ [/\bACEP\b/,"https://www.acep.org/patient-care/clinical-policies","ACEP"],
+ [/\bESO\b/,"https://eso-stroke.org/guidelines/","ESO"],
+ [/\bFLASOG\b/,"https://www.flasog.org","FLASOG"],
+ [/\bASCRS\b/,"https://fascrs.org/healthcare-providers/education/clinical-practice-guidelines","ASCRS"],
+ [/\bAAD\b/,"https://www.aad.org/member/clinical-quality/guidelines","AAD"],
+ [/\bEAACI\b/,"https://eaaci.org","EAACI"],
+ [/\bWAO\b/,"https://www.worldallergy.org","WAO"],
+ [/\bBTF\b/,"https://braintrauma.org/guidelines","Brain Trauma Foundation"],
+ [/\bACIN\b|Infectio/,"https://www.revistainfectio.org","Revista Infectio (ACIN)"],
+ [/\bSCC\b|Sociedad Colombiana de Cardiolog/,"https://scc.org.co","Sociedad Colombiana de Cardiología"],
+ [/Cochrane/,"https://www.cochranelibrary.com","Cochrane Library"],
+ [/Maudsley/,null,"Maudsley (libro)"]];
+const EXT=`<svg class="ico sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`;
+const xa=(url,txt,cls="")=>`<a class="xlink ${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${txt}${EXT}<span class="vh"> (abre en otra pestaña)</span></a>`;
+const pubmed=t=>"https://pubmed.ncbi.nlm.nih.gov/?term="+encodeURIComponent(t+" guideline");
+const gsearchCO=t=>"https://www.google.com/search?q="+encodeURIComponent(`"${t}" site:minsalud.gov.co OR site:gpc.minsalud.gov.co OR site:ins.gov.co`);
+function coLinksHTML(g){if(!g||!(g.co.st==="ok"||g.co.st==="old"))return "";const n=g.co.n;const hit=CO_LINKS.find(([re])=>re.test(n));
+  const org=ORG_LINKS.find(([re,u])=>u&&re.test(n));
+  const main=hit?xa(hit[1],hit[2],"primary"):org?xa(org[1],"Sitio oficial "+org[2]):(/MinSalud|INS|GPC|Resolución|Lineamientos/.test(n)?xa(GPC_PORTAL,"Portal de GPC del Ministerio de Salud"):"");
+  const q=n.replace(/\(.*?\)/g,"").split(/[,;]/)[0].trim();
+  return `<div class="xlinks">${main}${xa(gsearchCO(q),"Buscar el documento en sitios oficiales","sub")}</div>`;}
+function intlLinksHTML(g){if(!g||!g.intl)return "";const toks=g.intl.split("·").map(x=>x.trim()).filter(Boolean);
+  return `<ul class="xl-list">${toks.map(t=>{const o=ORG_LINKS.find(([re])=>re.test(t));
+    return `<li><span>${esc(t)}</span><span class="xl-a">${o&&o[1]?xa(o[1],"Sitio oficial "+o[2]):""}${/revisiones de expertos|Goldfrank|Maudsley/i.test(t)?"":xa(pubmed(t),"PubMed","sub")}</span></li>`;}).join("")}</ul>`;}
 
 const isNum=x=>/^\s*\d+[.)]?\s*$/.test(String(x));
 /* ---------- utilidades de ficha ---------- */
@@ -4032,9 +4163,9 @@ function mainGuide(g){if(!g)return "";return (g.co.st==="ok"||g.co.st==="old")?`
 function evidenceHTML(g){if(!g)return `<p class="muted">Sin guía registrada para esta ficha.</p>`;
   const st={ok:["st-ok","Vigente"],old:["st-old","Desactualizada, se complementa"],none:["st-none","No disponible"],na:["st-old","Sin verificar"]}[g.co.st];
   const co=(g.co.st==="none"||g.co.st==="na")?`<span class="${st[0]}">${st[1]}.</span> ${g.co.txt}`:`${g.co.n}${g.co.y?", "+g.co.y:""}. <span class="${st[0]}">${st[1]}.</span> ${g.co.txt}`;
-  return `<dl><dt>Guía colombiana</dt><dd>${co}</dd><dt>${g.co.st==="ok"?"Guías complementarias":"Guías internacionales que se usan"}</dt><dd>${g.intl}</dd>
+  return `<dl><dt>Guía colombiana</dt><dd>${co}${coLinksHTML(g)}</dd><dt>${g.co.st==="ok"?"Guías complementarias":"Guías internacionales que se usan"}</dt><dd>${intlLinksHTML(g)}</dd>
    ${g.dif&&g.dif.length?`<dt>Aplicabilidad en Colombia</dt><dd><ul class="criteria">${g.dif.map(x=>`<li>${x}</li>`).join("")}</ul></dd>`:""}
-   <dt>Revisión de la ficha</dt><dd>${REV_LONG}. Contenido redactado a partir de las guías oficiales citadas; verifica la versión vigente en la fuente.</dd></dl>`;}
+   <dt>Revisión de la ficha</dt><dd>${REV_LONG}. Contenido redactado a partir de las guías oficiales citadas; verifica la versión vigente en la fuente. Los enlaces llevan al documento oficial cuando está verificado; si no, al portal oficial de la organización o a una búsqueda.</dd></dl>`;}
 function orderLine(d,o,n){let s=`${n}. ${o.d}${o.dose?": "+o.dose:""}`;if(o.dil)s+=` | Dilución: ${o.dil}`;if(o.calc){const t=calcText(o.calc);if(t)s+=` | ${t}`;}
   const a=o.a||altFor(d.id,o.d);return a?s+`\n   Alternativa / si no hay: ${a}`:s;}
 function copyText(text,msg){const ok=()=>{toast(msg);try{navigator.vibrate&&navigator.vibrate(35);}catch(e){}};
@@ -4064,7 +4195,7 @@ function renderFicha(d){const g=GUIDES[d.id]||d.g;const fo=d.orders.find(o=>!o.c
   if(d.goals&&d.goals[0])sum.push(["Meta",d.goals[0],false]);if(d.alerts&&d.alerts[0])sum.push(["Alerta principal",d.alerts[0],false]);
   const fast=MODE!=="estudio";const hasFl=(d.flow||[]).length>0;
   const secs=[["sec-resumen","Resumen"]].concat(fast?[["sec-ordenes","Órdenes"],["sec-metas","Metas y alertas"]]:[]).concat(hasFl?[["sec-flujo","Flujo"]]:[]).concat([["sec-antes","Antes de ordenar"]]).concat(fast?[]:[["sec-ordenes","Órdenes"],["sec-metas","Metas y alertas"]]);
-  if((d.rel||[]).length)secs.push(["sec-rel","Relacionado"]);secs.push(["sec-evidencia","Evidencia"]);
+  if((d.rel||[]).length)secs.push(["sec-rel","Relacionado"]);secs.push(["sec-notas","Mis notas"],["sec-evidencia","Evidencia"]);
   const orders=d.orders.map((o,i)=>{if(o.cat)return `<li class="ocat">${o.cat}</li>`;const a=o.a||altFor(d.id,o.d);
     return `<li class="ord"><div class="body"><div class="drug">${o.d}</div>${o.dose?`<div class="dose">${o.dose}</div>`:""}${o.dil?`<div class="meta"><em>Dilución:</em> ${o.dil}</div>`:""}${o.n?`<div class="meta">${hiS(o.n)}</div>`:""}${calcHTML(o,i)}${a?`<div class="alt"><b>Si no hay</b>${a}</div>`:""}</div>
      <button class="icon-btn cp" data-cp="${i}" aria-label="Copiar la orden: ${esc(o.d)}">${ic("copy","sm")}</button></li>`;}).join("");
@@ -4080,13 +4211,14 @@ function renderFicha(d){const g=GUIDES[d.id]||d.g;const fo=d.orders.find(o=>!o.c
    ${blocks}
    ${knowHTML(d)}
    ${relHTML(d)}
+   ${notesHTML(d)}
    <section class="fsec" id="sec-evidencia"><details class="evd panel" style="padding:4px 16px 16px"><summary>${ic("book")} Evidencia y referencias ${ic("right","sm chev")}</summary>${evidenceHTML(g)}</details></section>
-   <div class="factbar"><button class="btn primary" id="copyAll2">${ic("copy","sm")} Copiar órdenes</button><button class="btn" id="print2">${ic("print","sm")} Imprimir</button><button class="btn" id="share2">${ic("share","sm")} Compartir</button></div>
+   <div class="factbar"><button class="btn primary" id="copyAll2">${ic("copy","sm")} Copiar órdenes</button><button class="btn" id="print2">${ic("print","sm")} Imprimir</button><button class="btn" id="share2">${ic("share","sm")} Compartir</button><button class="btn" id="sugg2">${ic("mega","sm")} Sugerir corrección</button></div>
    <p class="foot">Apoyo a la decisión clínica. Verifica dosis, diluciones de tu servicio, función renal, alergias, embarazo e interacciones.</p></article>`;
   bindHead(d);renderWeightNote(d);bindNeedKg();
   if($("#copyAll"))$("#copyAll").onclick=()=>copyOrders(d);$("#copyAll2").onclick=()=>copyOrders(d);$("#print2").onclick=doPrint;$("#share2").onclick=()=>shareLink(d);
   const ol=$("#main .orders");if(ol)ol.addEventListener("click",e=>{const b=e.target.closest("[data-cp]");if(b)copyOne(d,+b.dataset.cp);});
-  bindStudy(d);
+  bindStudy(d);bindNotes(d);$("#sugg2").onclick=()=>openSuggest(d);
   $("#evGo").onclick=()=>{const s=$("#sec-evidencia");s.querySelector("details").open=true;s.scrollIntoView({behavior:"smooth"});};
   $$(".secnav a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=document.getElementById(a.dataset.go);if(t){if(a.dataset.go==="sec-evidencia")t.querySelector("details").open=true;t.scrollIntoView({behavior:"smooth"});}});
   spy();}
@@ -4216,6 +4348,159 @@ function modeSwitchHTML(){return `<div class="mswitch" role="radiogroup" aria-la
   <button role="radio" aria-checked="${MODE==="estudio"}" data-mode="estudio">${ic("book","sm")}<span>Estudio</span></button></div>`;}
 function bindModeSwitch(root){(root||document).querySelectorAll(".mswitch [data-mode]").forEach(b=>b.onclick=()=>{if((b.dataset.mode==="estudio")!==(MODE==="estudio"))setMode(b.dataset.mode);});}
 
+/* ================= CUENTAS, SINCRONIZACIÓN Y SUGERENCIAS (Supabase) =================
+   Para activar: crea un proyecto en supabase.com, ejecuta supabase-schema.sql y pega aquí
+   la "Project URL" y la clave pública "anon". La clave anon es pública por diseño; la
+   seguridad la dan las políticas RLS del esquema. NUNCA pegues la clave "service_role". */
+const TINTERNO_CLOUD={url:"",anonKey:""};
+/* ------------------------------------------------------------------------------------ */
+const SUPA_CDN="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js";
+const SYNC_KEYS=["tinterno-fav","tinterno-recent","tinterno-learn","tinterno-notes","tinterno-mode"];
+const cloudOn=()=>!!(window.__CLOUD_MOCK||(TINTERNO_CLOUD.url&&TINTERNO_CLOUD.anonKey));
+let SB=null,USER=null,PROFILE=null,syncT=null,SYNC_STATE="";
+let NOTES=LS.get("tinterno-notes",{});
+function loadScript(src){return new Promise((ok,ko)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=()=>ko(new Error("No se pudo cargar el servicio de cuentas"));document.head.appendChild(s);});}
+async function sb(){if(window.__CLOUD_MOCK)return window.__CLOUD_MOCK;if(SB)return SB;if(!cloudOn())return null;
+  if(!window.supabase)await loadScript(SUPA_CDN);SB=window.supabase.createClient(TINTERNO_CLOUD.url,TINTERNO_CLOUD.anonKey,{auth:{persistSession:true,autoRefreshToken:true}});return SB;}
+/* sincronización: fusiona lo local con lo guardado en la nube */
+function localSnapshot(){const o={};SYNC_KEYS.forEach(k=>o[k]=LS.get(k,null));return o;}
+function mergeData(loc,rem){const o={...rem};
+  const F=(rem["tinterno-fav"]||[]),Fl=(loc["tinterno-fav"]||[]);o["tinterno-fav"]=[...new Set([...Fl,...F])];
+  const R=[...(loc["tinterno-recent"]||[]),...(rem["tinterno-recent"]||[])];o["tinterno-recent"]=[...new Set(R)].slice(0,12);
+  const L={...(rem["tinterno-learn"]||{})};Object.entries(loc["tinterno-learn"]||{}).forEach(([id,r])=>{const x=L[id];if(!x||(r.last||0)>=(x.last||0))L[id]={...x,...r,n:Math.max(r.n||0,(x&&x.n)||0)};});o["tinterno-learn"]=L;
+  const N={...(rem["tinterno-notes"]||{})};Object.entries(loc["tinterno-notes"]||{}).forEach(([id,v])=>{if(!N[id]||(v.u||0)>=(N[id].u||0))N[id]=v;});o["tinterno-notes"]=N;
+  o["tinterno-mode"]=loc["tinterno-mode"]||rem["tinterno-mode"]||"turno";return o;}
+function applySnapshot(o){SYNC_KEYS.forEach(k=>{if(o[k]!==undefined&&o[k]!==null)localStorage.setItem(k,JSON.stringify(o[k]));});
+  FAV=LS.get("tinterno-fav",[]);REC=LS.get("tinterno-recent",[]);LRN=LS.get("tinterno-learn",{});NOTES=LS.get("tinterno-notes",{});MODE=LS.get("tinterno-mode","turno");}
+async function pullAndMerge(){const c=await sb();if(!c||!USER)return;SYNC_STATE="Sincronizando…";
+  const {data,error}=await c.from("user_data").select("data").eq("user_id",USER.id).maybeSingle();if(error){SYNC_STATE="Sin sincronizar";return;}
+  const merged=mergeData(localSnapshot(),(data&&data.data)||{});applySnapshot(merged);await pushNow();}
+async function pushNow(){const c=await sb();if(!c||!USER)return;const {error}=await c.from("user_data").upsert({user_id:USER.id,data:localSnapshot(),updated_at:new Date().toISOString()});
+  SYNC_STATE=error?"Sin sincronizar (se reintentará)":"Sincronizado "+new Date().toLocaleTimeString("es-CO",{hour:"2-digit",minute:"2-digit"});const s=$("#syncState");if(s)s.textContent=SYNC_STATE;}
+function queueSync(){if(!USER)return;clearTimeout(syncT);syncT=setTimeout(pushNow,2500);}
+{const _set=LS.set;LS.set=(k,v)=>{_set(k,v);if(SYNC_KEYS.includes(k))queueSync();};}
+async function initCloud(){if(!cloudOn())return;try{const c=await sb();const {data}=await c.auth.getSession();await setUser(data&&data.session?data.session.user:null,false);
+  c.auth.onAuthStateChange((_e,s)=>{setUser(s?s.user:null,true);});}catch(e){console.warn(e);}}
+async function setUser(u,rerender){const changed=(u&&u.id)!==(USER&&USER.id);USER=u;PROFILE=null;
+  if(USER){const c=await sb();const {data}=await c.from("profiles").select("display_name,role").eq("id",USER.id).maybeSingle();PROFILE=data||{display_name:"",role:"user"};if(changed)await pullAndMerge();}
+  updateAcct();if(rerender&&changed){renderSidebar();route();}}
+const isStaff=()=>!!(PROFILE&&PROFILE.role==="staff");
+function updateAcct(){const b=$("#acctBtn");if(!b)return;b.setAttribute("aria-label",USER?`Tu cuenta: ${PROFILE&&PROFILE.display_name||USER.email}`:"Ingresar o crear cuenta");b.classList.toggle("on",!!USER);}
+/* ---------- datos personales: validación suave para evitar datos de pacientes ---------- */
+function looksLikePatientData(t){return /\b\d{7,10}\b/.test(t)||/\b(c\.?c\.?|cédula|cedula|historia cl[ií]nica|HC\s*\d|paciente\s+[A-ZÁÉÍÓÚ][a-záéíóú]+\s+[A-ZÁÉÍÓÚ])/i.test(t);}
+const PRIV_WARN="No escribas nombres, documentos, historias clínicas ni ningún dato que identifique a un paciente.";
+/* ---------- página de cuenta ---------- */
+function renderAccount(){const m=$("#main");
+  if(!cloudOn()){m.innerHTML=`<div class="page"><h1>Tu cuenta</h1><div class="panel" style="padding:20px"><p><b>Las cuentas aún no están activadas en esta instalación.</b></p><p class="muted">Mientras tanto, favoritos, recientes, notas y tu repaso se guardan en este dispositivo. Cuando el administrador active las cuentas podrás iniciar sesión y llevarlos a cualquier dispositivo, y enviar sugerencias o correcciones.</p></div></div>`;return;}
+  if(!USER){m.innerHTML=`<div class="page"><h1>Tu cuenta</h1><p class="lead">Crea una cuenta para llevar tus favoritos, notas y repaso a cualquier dispositivo, y para enviar sugerencias o correcciones al equipo.</p>
+    <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="in">Ingresar</button><button role="tab" aria-selected="false" data-tab="up">Crear cuenta</button></div>
+    <form class="panel authf" id="authF" novalidate>
+      <div class="f-up" hidden><label for="aName">Nombre para mostrar</label><input id="aName" autocomplete="nickname" maxlength="60" placeholder="Ej.: Dra. López, interna CES"></div>
+      <label for="aMail">Correo</label><input id="aMail" type="email" autocomplete="email" required>
+      <label for="aPass">Contraseña</label><input id="aPass" type="password" autocomplete="current-password" minlength="8" required>
+      <label class="f-up cf-chk" hidden><input type="checkbox" id="aOk"><span>Autorizo el tratamiento de mis datos personales según la <a href="#privacidad" target="_blank">política de privacidad</a> (Ley 1581 de 2012).</span></label>
+      <p id="aMsg" class="muted" role="status"></p>
+      <button class="btn primary" type="submit" id="aGo">Ingresar</button>
+      <button class="linkbtn" type="button" id="aForgot">Olvidé mi contraseña</button>
+    </form></div>`;
+    let mode="in";const setTab=t=>{mode=t;$$(".tabs [data-tab]").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));$$(".f-up").forEach(x=>x.hidden=t!=="up");$("#aGo").textContent=t==="up"?"Crear cuenta":"Ingresar";$("#aPass").autocomplete=t==="up"?"new-password":"current-password";$("#aForgot").hidden=t==="up";};
+    $$(".tabs [data-tab]").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+    const msg=(t,err)=>{const e=$("#aMsg");e.textContent=t;e.style.color=err?"var(--red)":"";};
+    $("#authF").onsubmit=async e=>{e.preventDefault();const mail=$("#aMail").value.trim(),pass=$("#aPass").value;
+      if(!/^\S+@\S+\.\S+$/.test(mail))return msg("Escribe un correo válido.",true);if(pass.length<8)return msg("La contraseña debe tener al menos 8 caracteres.",true);
+      if(mode==="up"&&!$("#aOk").checked)return msg("Debes autorizar el tratamiento de datos para crear la cuenta.",true);
+      $("#aGo").disabled=true;msg("Un momento…");try{const c=await sb();
+        if(mode==="up"){const {data,error}=await c.auth.signUp({email:mail,password:pass,options:{data:{display_name:$("#aName").value.trim().slice(0,60)}}});if(error)throw error;
+          msg(data.session?"Cuenta creada. ¡Bienvenido!":"Cuenta creada. Revisa tu correo para confirmarla y luego ingresa.");}
+        else{const {error}=await c.auth.signInWithPassword({email:mail,password:pass});if(error)throw error;toast("Sesión iniciada");}
+      }catch(err){msg(authErr(err),true);}finally{const g=$("#aGo");if(g)g.disabled=false;}};
+    $("#aForgot").onclick=async()=>{const mail=$("#aMail").value.trim();if(!/^\S+@\S+\.\S+$/.test(mail))return msg("Escribe tu correo arriba y vuelve a tocar “Olvidé mi contraseña”.",true);
+      try{const c=await sb();const {error}=await c.auth.resetPasswordForEmail(mail,{redirectTo:location.origin+location.pathname+"#cuenta"});if(error)throw error;msg("Te enviamos un correo para restablecer la contraseña.");}catch(err){msg(authErr(err),true);}};
+    return;}
+  const name=(PROFILE&&PROFILE.display_name)||USER.email;
+  m.innerHTML=`<div class="page"><h1>Tu cuenta</h1>
+   <div class="panel" style="padding:16px"><p style="margin:0"><b>${esc(name)}</b>${isStaff()?` <span class="badge">Personal revisor</span>`:""}</p><p class="muted" style="margin:4px 0 0">${esc(USER.email)}</p>
+    <p class="muted" style="font-size:.88rem;margin:8px 0 0">${ic("clock","sm")} <span id="syncState">${SYNC_STATE||"Sincronización lista"}</span> · favoritos, recientes, notas, repaso y modo.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn small" id="syncNow">Sincronizar ahora</button>${isStaff()?`<a class="btn small primary" href="#revision">Panel de revisión</a>`:""}<button class="btn small" id="logout">Cerrar sesión</button></div></div>
+   <section class="hsec"><div class="hsec-h"><h2>Mis sugerencias</h2></div><div id="mySug"><p class="muted">Cargando…</p></div></section>
+   <section class="hsec"><div class="hsec-h"><h2>Mis notas</h2></div>${notesList()}</section>
+   <p class="muted" style="font-size:.88rem">Para eliminar tu cuenta y tus datos escribe desde tu correo registrado al administrador de Tinterno. <a href="#privacidad">Política de privacidad</a>.</p></div>`;
+  $("#logout").onclick=async()=>{const c=await sb();await c.auth.signOut();toast("Sesión cerrada");location.hash="";};
+  $("#syncNow").onclick=async()=>{await pullAndMerge();toast("Sincronizado");renderAccount();};
+  loadMySuggestions();}
+function authErr(e){const m=(e&&e.message)||"";if(/Invalid login/i.test(m))return "Correo o contraseña incorrectos.";if(/already registered|already exists/i.test(m))return "Ese correo ya tiene cuenta. Ingresa o recupera la contraseña.";if(/Email not confirmed/i.test(m))return "Confirma tu correo antes de ingresar (revisa tu bandeja).";if(/rate|too many/i.test(m))return "Demasiados intentos. Espera unos minutos.";return "No se pudo completar: "+m;}
+function notesList(){const e=Object.entries(NOTES).filter(([id,v])=>byId(id)&&v.t);return e.length?`<ul class="rows">${e.sort((a,b)=>b[1].u-a[1].u).map(([id,v])=>`<li><a href="#${id}"><span class="t"><b>${esc(byId(id).name)}</b><small>${esc(v.t.slice(0,90))}${v.t.length>90?"…":""}</small></span>${ic("right","sm")}</a></li>`).join("")}</ul>`:`<p class="muted">Aún no tienes notas. Puedes agregarlas al final de cada ficha.</p>`;}
+const SUG_ST={nueva:"Nueva",en_revision:"En revisión",aceptada:"Aceptada",rechazada:"No aceptada",implementada:"Implementada"};
+async function loadMySuggestions(){const box=$("#mySug");try{const c=await sb();const {data,error}=await c.from("suggestions").select("id,ficha_id,ficha_name,kind,body,status,staff_note,created_at").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(50);if(error)throw error;
+  box.innerHTML=data.length?`<ul class="rows">${data.map(s=>`<li><a href="#${esc(s.ficha_id)}"><span class="t"><b>${esc(s.ficha_name||s.ficha_id)}</b><small>${esc(s.kind)} · <span class="st st-${s.status}">${SUG_ST[s.status]||s.status}</span> · ${new Date(s.created_at).toLocaleDateString("es-CO")}${s.staff_note?` · Respuesta: ${esc(s.staff_note)}`:""}</small></span></a></li>`).join("")}</ul>`:`<p class="muted">Aún no has enviado sugerencias. Usa “Sugerir corrección” en cualquier ficha.</p>`;}
+  catch(e){box.innerHTML=`<p class="muted">No se pudieron cargar tus sugerencias.</p>`;}}
+/* ---------- formulario de sugerencia (desde la ficha) ---------- */
+const SUG_KINDS=["Error de dosis o vía","Guía desactualizada","Falta información","Alternativa o disponibilidad en Colombia","Error de texto o redacción","Otro"];
+function openSuggest(d){const draftK="tinterno-sugdraft-"+d.id;let draft={};try{draft=JSON.parse(sessionStorage.getItem(draftK)||"{}");}catch(e){}
+  const orders=(d.orders||[]).filter(o=>!o.cat).map(o=>o.d);
+  const body=$("#sugBody");
+  if(!cloudOn()){body.innerHTML=`<p>Las cuentas aún no están activadas, así que las sugerencias no pueden enviarse todavía.</p><button class="btn" data-close>Cerrar</button>`;}
+  else if(!USER){body.innerHTML=`<p>Para enviar una sugerencia necesitas una cuenta. Así el equipo puede responderte y ver el estado.</p><div style="display:flex;gap:8px"><a class="btn primary" href="#cuenta">Ingresar o crear cuenta</a><button class="btn" data-close>Cancelar</button></div>`;}
+  else{body.innerHTML=`<form id="sugF" novalidate><p class="muted" style="margin-top:0">Ficha: <b>${esc(d.name)}</b></p>
+    <label for="sKind">Tipo</label><select id="sKind">${SUG_KINDS.map(k=>`<option ${draft.kind===k?"selected":""}>${k}</option>`).join("")}</select>
+    ${d.calcForm||d.rows?"":`<label for="sSec">Sección</label><select id="sSec">${["Órdenes","Flujo","Antes de ordenar","Metas y alertas","Evidencia","General"].map(x=>`<option ${draft.sec===x?"selected":""}>${x}</option>`).join("")}</select>
+    ${orders.length?`<label for="sOrd">Orden específica (opcional)</label><select id="sOrd"><option value="">—</option>${orders.map(o=>`<option ${draft.ord===o?"selected":""}>${esc(o)}</option>`).join("")}</select>`:""}`}
+    <label for="sBody">¿Qué debería decir y por qué?</label><textarea id="sBody" rows="5" maxlength="4000" placeholder="Describe el error y la corrección propuesta.">${esc(draft.body||"")}</textarea>
+    <label for="sSrc">Fuente que la respalda (URL, opcional)</label><input id="sSrc" type="url" inputmode="url" placeholder="https://…" value="${esc(draft.src||"")}">
+    <p class="warnline">${ic("alert","sm")} ${PRIV_WARN}</p>
+    <p id="sMsg" role="status" class="muted"></p>
+    <div style="display:flex;gap:8px"><button class="btn primary" type="submit" id="sGo">Enviar sugerencia</button><button class="btn" type="button" data-close>Cancelar</button></div></form>`;
+    const save=()=>{try{sessionStorage.setItem(draftK,JSON.stringify({kind:$("#sKind").value,sec:$("#sSec")&&$("#sSec").value,ord:$("#sOrd")&&$("#sOrd").value,body:$("#sBody").value,src:$("#sSrc").value}));}catch(e){}};
+    $("#sugF").addEventListener("input",save);
+    $("#sugF").onsubmit=async e=>{e.preventDefault();const t=$("#sBody").value.trim(),src=$("#sSrc").value.trim();const msg=(x,err)=>{const m=$("#sMsg");m.textContent=x;m.style.color=err?"var(--red)":"";};
+      if(t.length<10)return msg("Escribe al menos una frase explicando la corrección.",true);
+      if(looksLikePatientData(t))return msg("Parece que incluiste datos de un paciente (números de documento o historia). Quítalos antes de enviar.",true);
+      if(src&&!/^https?:\/\/\S+$/.test(src))return msg("La fuente debe ser una URL que empiece por http:// o https://",true);
+      $("#sGo").disabled=true;msg("Enviando…");
+      try{const c=await sb();const {error}=await c.from("suggestions").insert({ficha_id:d.id,ficha_name:d.name,kind:$("#sKind").value,section:$("#sSec")?$("#sSec").value:null,order_ref:$("#sOrd")&&$("#sOrd").value||null,body:t,source_url:src||null,app_version:VERSION});
+        if(error)throw error;try{sessionStorage.removeItem(draftK);}catch(e){}closeLayer();toast("Sugerencia enviada. Gracias");}
+      catch(err){msg("No se pudo enviar: "+((err&&err.message)||"error de conexión"),true);$("#sGo").disabled=false;}};}
+  $$("#sugDlg [data-close]").forEach(b=>b.onclick=()=>closeLayer());
+  openLayerEl($("#sugDlg"),USER?"#sBody":"a,button");}
+/* ---------- notas personales en la ficha ---------- */
+function notesHTML(d){const n=NOTES[d.id];return `<section class="fsec" id="sec-notas"><details class="evd panel" style="padding:4px 16px 16px" ${n&&n.t?"open":""}><summary>${ic("list")} Mis notas ${n&&n.t?`<span class="muted" style="font-weight:400;font-size:.85rem">(1)</span>`:""} ${ic("right","sm chev")}</summary>
+  <label class="vh" for="myNote">Mis notas sobre esta ficha</label><textarea id="myNote" class="note-ta" rows="4" maxlength="2000" placeholder="Tus perlas, ajustes de tu servicio, recordatorios…">${esc(n?n.t:"")}</textarea>
+  <p class="warnline">${ic("alert","sm")} ${PRIV_WARN}</p><p class="muted" id="noteMsg" style="font-size:.85rem;margin:4px 0 0">${USER?"Se sincroniza con tu cuenta.":"Se guarda en este dispositivo"+(cloudOn()?"; ingresa para llevarla a otros dispositivos.":".")}</p></details></section>`;}
+function bindNotes(d){const ta=$("#myNote");if(!ta)return;let t;ta.addEventListener("input",()=>{clearTimeout(t);t=setTimeout(()=>{const v=ta.value;
+  if(looksLikePatientData(v)){$("#noteMsg").textContent="Parece que incluiste datos de un paciente. Quítalos; no se guardó este cambio.";$("#noteMsg").style.color="var(--red)";return;}
+  if(v.trim())NOTES[d.id]={t:v,u:Date.now()};else delete NOTES[d.id];LS.set("tinterno-notes",NOTES);$("#noteMsg").style.color="";$("#noteMsg").textContent="Guardado"+(USER?" y sincronizando":"");},600);});}
+/* ---------- panel del personal ---------- */
+let REV_FILTER="nueva";
+async function renderReview(){const m=$("#main");if(!USER||!isStaff()){m.innerHTML=`<div class="page"><h1>Panel de revisión</h1><div class="empty"><b>Acceso solo para el personal revisor</b><a href="#cuenta">Ir a tu cuenta</a></div></div>`;return;}
+  m.innerHTML=`<div class="page"><h1>Panel de revisión</h1><p class="lead">Sugerencias y correcciones enviadas por los usuarios.</p>
+   <div class="chips" role="tablist">${Object.entries(SUG_ST).map(([k,t])=>`<button role="tab" aria-selected="${REV_FILTER===k}" data-f="${k}">${t}</button>`).join("")}<button role="tab" aria-selected="${REV_FILTER==="all"}" data-f="all">Todas</button></div>
+   <div id="revList"><p class="muted">Cargando…</p></div></div>`;
+  $$(".chips [data-f]").forEach(b=>b.onclick=()=>{REV_FILTER=b.dataset.f;renderReview();});
+  try{const c=await sb();let q=c.from("suggestions").select("id,ficha_id,ficha_name,kind,section,order_ref,body,source_url,status,staff_note,created_at,app_version,profiles(display_name)").order("created_at",{ascending:false}).limit(100);
+    if(REV_FILTER!=="all")q=q.eq("status",REV_FILTER);const {data,error}=await q;if(error)throw error;
+    $("#revList").innerHTML=data.length?data.map(s=>`<article class="panel rev" data-id="${s.id}">
+      <div class="rev-h"><a href="#${esc(s.ficha_id)}"><b>${esc(s.ficha_name||s.ficha_id)}</b></a><span class="st st-${s.status}">${SUG_ST[s.status]||s.status}</span></div>
+      <p class="muted" style="margin:4px 0">${esc(s.kind)}${s.section?" · "+esc(s.section):""}${s.order_ref?" · Orden: "+esc(s.order_ref):""} · ${new Date(s.created_at).toLocaleString("es-CO")} · ${esc((s.profiles&&s.profiles.display_name)||"usuario")} · v${esc(s.app_version||"?")}</p>
+      <p class="rev-b">${esc(s.body)}</p>${s.source_url&&/^https?:\/\/[^\s"<>]+$/.test(s.source_url)?`<p>${xa(esc(s.source_url),"Fuente citada")}</p>`:s.source_url?`<p class="muted">Fuente (no enlazada): ${esc(s.source_url)}</p>`:""}
+      <label class="vh" for="st-${s.id}">Estado</label><div class="rev-a"><select id="st-${s.id}" data-st>${Object.entries(SUG_ST).map(([k,t])=>`<option value="${k}" ${s.status===k?"selected":""}>${t}</option>`).join("")}</select>
+      <label class="vh" for="nt-${s.id}">Respuesta al usuario</label><input id="nt-${s.id}" data-nt maxlength="1000" placeholder="Respuesta al usuario (opcional)" value="${esc(s.staff_note||"")}"><button class="btn small primary" data-save>Guardar</button></div></article>`).join(""):`<div class="empty"><b>No hay sugerencias en este estado</b></div>`;
+    $$("#revList [data-save]").forEach(b=>b.onclick=async()=>{const a=b.closest("[data-id]");const id=+a.dataset.id;b.disabled=true;
+      const {error}=await c.from("suggestions").update({status:a.querySelector("[data-st]").value,staff_note:a.querySelector("[data-nt]").value.trim()||null,reviewed_by:USER.id,reviewed_at:new Date().toISOString()}).eq("id",id);
+      b.disabled=false;toast(error?"No se pudo guardar":"Revisión guardada",!!error);if(!error&&REV_FILTER!=="all")renderReview();});}
+  catch(e){$("#revList").innerHTML=`<p class="muted">No se pudieron cargar las sugerencias: ${esc((e&&e.message)||"")}</p>`;}}
+/* ---------- política de privacidad (resumen) ---------- */
+function renderPrivacy(){$("#main").innerHTML=`<div class="page"><h1>Política de privacidad</h1>
+  <p class="lead">Resumen para usuarios de Tinterno (Ley 1581 de 2012 y Decreto 1377 de 2013). El administrador debe completar sus datos de contacto antes de abrir el registro.</p>
+  <div class="panel" style="padding:16px"><ul class="criteria">
+  <li><b>Sin cuenta</b>, la app no envía datos a ningún servidor: peso, favoritos, recientes, notas y repaso quedan en tu dispositivo.</li>
+  <li><b>Con cuenta</b> se guardan: correo, nombre para mostrar, tus favoritos, recientes, notas, repaso, modo de uso y las sugerencias que envíes.</li>
+  <li><b>Finalidad:</b> sincronizar tus datos entre dispositivos y gestionar sugerencias para mejorar el contenido clínico.</li>
+  <li><b>No se recolectan datos de pacientes.</b> Está prohibido escribir nombres, documentos o historias clínicas en notas o sugerencias.</li>
+  <li><b>El peso del paciente nunca</b> sale del dispositivo y se borra al cerrar la app.</li>
+  <li>Las sugerencias las ve solo el personal revisor. Tus datos no se venden ni se comparten con terceros.</li>
+  <li><b>Tus derechos:</b> conocer, actualizar, rectificar y suprimir tus datos, y revocar la autorización, escribiendo al responsable del tratamiento.</li>
+  <li><b>Responsable del tratamiento:</b> [nombre y correo de contacto del administrador — por completar].</li></ul></div></div>`;}
+
 /* ---------- portada ---------- */
 const CRIT=["reanimacion","sepsis","shock","pcr-fv","iamcest-icp","acvi","ee","anafilaxia","cad","hiperk","ica","hpp","sri","intox"];
 const FREQ=["c-glasgow","c-cha2ds2","c-wellstep","c-curb65","c-crcl","c-news2","c-infusion","c-qtc"];
@@ -4270,7 +4555,7 @@ function renderCat(m,sub){const M=MAC.find(x=>x.k===m);if(!M){renderNotFound();r
   listPage(sub||M.n,`<nav class="crumb" aria-label="Ruta"><a href="#">Inicio</a>${ic("right","sm")}${sub?`<a href="#cat/${m}">${M.n}</a>`:"<span>Sistemas</span>"}</nav>`,sub?"":`${inMac(m).length} fichas en ${subsOf(m).length} secciones.`,
     subs.map(([s])=>[s,inMac(m).filter(d=>TAX[d.id].sub===s)]),!!sub);}
 function renderCtx(k){const list=inCtx(k);if(!list.length&&k!=="peso"){renderNotFound();return;}const C=CTX.find(c=>c.k===k);
-  let groups;if(k==="calc"||k==="ref"){const g={};list.forEach(d=>{(g[d.group]=g[d.group]||[]).push(d);});groups=Object.entries(g);}
+  let groups;if(k==="calc"||k==="ref"){const g={};list.forEach(d=>{const k2=grp(d);(g[k2]=g[k2]||[]).push(d);});groups=Object.entries(g);}
   else{groups=MAC.map(m=>[m.n,list.filter(d=>TAX[d.id].mac===m.k)]).filter(x=>x[1].length);}
   listPage(ctxName(k),`<nav class="crumb" aria-label="Ruta"><a href="#">Inicio</a>${ic("right","sm")}<span>Contextos</span></nav>`,k==="peso"?"Fichas con dosis que se calculan con el peso del paciente.":(C?C.d+". ":"")+list.length+" fichas.",groups,k==="calc"||k==="ref");}
 function renderFavs(){const fav=FAV.map(byId).filter(Boolean),rec=REC.map(byId).filter(Boolean);
@@ -4282,7 +4567,7 @@ function renderNotFound(){$("#main").innerHTML=`<div class="page empty"><b>No en
 /* ---------- router ---------- */
 function route(){closeLayer(true);const h=decodeURIComponent(location.hash.slice(1));current=null;let title="Tinterno · Guía clínica para el turno";
   if(!h)renderHome();else if(h==="buscar")renderSearch();else if(h==="favoritos")renderFavs();else if(h==="acerca")renderAbout();
-  else if(h==="repaso"){renderRepaso();title="Repaso · Tinterno";}else if(h==="aprendizaje"){renderLearn();title="Mi aprendizaje · Tinterno";}
+  else if(h==="repaso"){renderRepaso();title="Repaso · Tinterno";}else if(h==="cuenta"){renderAccount();title="Tu cuenta · Tinterno";}else if(h==="revision"){renderReview();title="Panel de revisión · Tinterno";}else if(h==="privacidad"){renderPrivacy();title="Privacidad · Tinterno";}else if(h==="aprendizaje"){renderLearn();title="Mi aprendizaje · Tinterno";}
   else if(h.startsWith("cat/")){const [,m,...rest]=h.split("/");renderCat(m,rest.length?rest.join("/"):null);title=macName(m)+" · Tinterno";}
   else if(h.startsWith("ctx/")){renderCtx(h.slice(4));title=ctxName(h.slice(4))+" · Tinterno";}
   else{const d=byId(h);if(d){current=d.id;pushRecent(d.id);logView(d);if(TAX[d.id].mac)SB_OPEN=TAX[d.id].mac;d.calcForm?renderCalcView(d):d.rows?renderRefView(d):renderFicha(d);title=d.name+" · Tinterno";}else renderNotFound();}
@@ -4290,7 +4575,7 @@ function route(){closeLayer(true);const h=decodeURIComponent(location.hash.slice
   if(h&&h!=="buscar"&&window.__routed){const m=$("#main");m.focus({preventScroll:true});}window.__routed=true;}
 /* ---------- arranque ---------- */
 function init(){$("#logoSlot").innerHTML=LOGO;applyTheme();updatePt();
-  $("#themeBtn").onclick=cycleTheme;$("#ptBtn").onclick=openPatient;$("#menuBtn").onclick=openMenu;$("#favBtn").onclick=()=>{location.hash="favoritos";};
+  $("#themeBtn").onclick=cycleTheme;$("#acctBtn").onclick=()=>{location.hash="cuenta";};$("#ptBtn").onclick=openPatient;$("#menuBtn").onclick=openMenu;$("#favBtn").onclick=()=>{location.hash="favoritos";};
   $("#sbToggle").onclick=()=>{const off=document.body.classList.toggle("sb-off");LS.set("tinterno-sb",off?"off":"on");$("#sbToggle").setAttribute("aria-expanded",!off);};
   if(LS.get("tinterno-sb","on")==="off"){document.body.classList.add("sb-off");$("#sbToggle").setAttribute("aria-expanded","false");}
   const q=$("#q");q.addEventListener("input",()=>{SQ=q.value;syncQ();goSearch(true);});
@@ -4302,7 +4587,7 @@ function init(){$("#logoSlot").innerHTML=LOGO;applyTheme();updatePt();
   $("#sheet").addEventListener("click",e=>{if(e.target.closest("a[href]"))closeLayer(true);});
   enableSwipe($("#sheet"));
   window.addEventListener("hashchange",route);window.addEventListener("beforeprint",()=>$$("details.evd").forEach(x=>x.open=true));
-  route();}
+  route();initCloud();}
 init();
 
 if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});}

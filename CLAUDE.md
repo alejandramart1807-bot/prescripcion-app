@@ -1,7 +1,7 @@
 # Tinterno — contexto del proyecto para Claude Code
 
 > Guárdalo en la raíz del repositorio como `CLAUDE.md`. Claude Code lo lee automáticamente al abrir el proyecto.
-> Última actualización: 18 de septiembre de 2026 · Versión de la app: **7.2**
+> Última actualización: 18 de septiembre de 2026 · Versión de la app: **7.5**
 
 ---
 
@@ -138,7 +138,7 @@ Advertencias: si se aplica el tope → el texto incluye "Tope máximo aplicado".
 
 ### Taxonomía (metadatos, sin duplicar datos) → `TAX[id] = {mac, sub, ctx:Set, kg}`
 
-- **Macrocategorías (`MAC`, 14):** cardio, resp, neuro, renal, dig, endo, infecto, hemo, cx (Cirugía y trauma: cirugía, ortopedia, urología, coloproctología, ORL, oftalmología), mujer, ped, mental, piel, otras.
+- **Macrocategorías (`MAC`, 15):** cardio, resp, neuro, renal, dig, endo, infecto, hemo, cx (Cirugía y trauma: cirugía general, ortopedia y reumatología, coloproctología, ORL, oftalmología), **uro (Urología: fichas de Uroclin + IPSS; separada de cirugía y ortopedia desde v7.4)**, mujer, ped, mental, piel, otras.
   - Mapeos: `SYSMAC` (sys → macro), `MIMAC` (medicina interna por group), `CRITMAC` (paciente crítico por group), `CALCMAC`/`CALCID` (calculadoras).
 - **Subcategoría `subOf()`:** normalmente el `sys`. Excepciones: "Medicina interna: piso y consulta", "Salud mental hospitalaria", "Toxicología y causas externas", "Escalas y calculadoras".
 - **Contextos (`CTX`):** urgencias, hospital, consulta, critico, calc, ref, más la vista `peso` (fichas con `calc` que depende del peso). Se derivan de `sys` y de las categorías de las órdenes (`ctxOf`).
@@ -194,9 +194,31 @@ Principio: **ayudar sin atrofiar el pensamiento**. Nunca poner fricción en urge
 - Sin rachas, puntos ni insignias (decisión deliberada).
 - Ideas pendientes: calculadoras que muestren la fórmula y pidan estimar antes de calcular; chequeo de un toque antes de la primera copia del turno (alergias, función renal, embarazo).
 
+## 6d. Enlaces a guías (v7.3) — `app6.js`
+
+- `CO_LINKS`: expresión regular sobre `g.co.n` → URL **verificada** del documento colombiano. Solo agregar URL verificadas (fecha de verificación: 18-sep-2026).
+- `GPC_PORTAL`: https://gpc.minsalud.gov.co/SitePages/default.aspx (respaldo para GPC del MinSalud sin documento verificado).
+- `ORG_LINKS`: expresión regular sobre cada referencia internacional (`g.intl` separado por "·") → página oficial de guías de la sociedad. `null` = libro sin enlace (Maudsley).
+- Cada referencia tiene además un enlace de búsqueda en PubMed, y cada guía colombiana una búsqueda restringida a minsalud.gov.co, gpc.minsalud.gov.co e ins.gov.co.
+- Cobertura en v7.3: 33/85 fichas con documento colombiano específico y 52 con portal; 403/542 referencias internacionales con sitio oficial; el resto (ensayos y revisiones) solo PubMed.
+- **Pendiente clínico:** la Ley 1616 de 2013 fue modificada por la Ley 2460 de 2025 y la Ley 2564 de 2026; revisar las fichas de salud mental que la citan.
+- Siguiente paso sugerido: completar URL verificadas para las GPC más usadas (ACV 2015, DM2 2016, HTA, falla cardíaca 2016, EPOC 2014, esquizofrenia 2014, depresión 2013, dengue, TB Res. 227/2020, Res. 2350/2020, Res. 051/2023).
+
+## 6e. Cuentas y sugerencias (v7.5) — `app7.js` + `supabase-schema.sql`
+
+- **Desactivado por defecto:** `const TINTERNO_CLOUD={url:"",anonKey:""}`. Con valores vacíos, las páginas de cuenta muestran "aún no activadas" y la app funciona 100 % local. Guía de activación: `ACTIVAR-CUENTAS.md`.
+- **Cliente:** supabase-js v2 (UMD desde jsdelivr), cargado de forma diferida solo si hay configuración. **Nunca** usar la clave `service_role` en el frontend.
+- **Tablas:** `profiles` (display_name, role user|staff; la creación la hace un trigger), `user_data` (jsonb con las claves sincronizadas), `suggestions` (ficha, tipo, sección, orden, texto, fuente, estado, respuesta, revisor).
+- **Seguridad (RLS):** cada usuario solo lee y escribe lo suyo. `is_staff()` da lectura global y actualización de estado y respuesta. Los privilegios por columna impiden cambiar el rol o editar el texto ajeno. Límite de 20 sugerencias por usuario cada 24 h. `anon` no tiene acceso.
+- **Sincronización:** claves `SYNC_KEYS` = fav, recent, learn, notes, mode. `mergeData` combina lo local y lo remoto (unión de favoritos, recientes ordenados, repaso por `last`, notas por `u`). Se escribe con un retraso de 2,5 s tras cada `LS.set` de esas claves. **El peso (`sessionStorage`) nunca se sincroniza.**
+- **Privacidad:** `looksLikePatientData()` bloquea números de 7–10 dígitos, "CC", "cédula", "historia clínica"… en notas y sugerencias. Hay que completar el responsable del tratamiento en `renderPrivacy()`.
+- **Rutas:** `#cuenta`, `#revision` (solo staff), `#privacidad`.
+- **Pruebas:** con un simulador en memoria (`window.__CLOUD_MOCK`) se verificaron registro, ingreso, error de ingreso, sincronización, notas, bloqueo de datos de pacientes, envío y revisión de sugerencias, y que un usuario normal no ve el panel ni sugerencias ajenas. Falta la prueba contra un proyecto Supabase real.
+- `sw.js` no cachea peticiones a `supabase.co`.
+
 ## 6c. Código fuente de la interfaz y ensamblado
 
-En el entorno de desarrollo la app se arma desde piezas: `head.html` + `style.css` + `body.html` + `data.js` (bloque clínico, **protegido por huella SHA-256 que empieza por `b72a16881725768c`**) + `app1.js` (iconos, almacenamiento, taxonomía) + `calc.js` + `srch.js` + `app2.js` (shell, diálogos, barra lateral y barra inferior) + `app3.js` (ficha, calculadora, referencia) + `app5.js` (aprendizaje) + `app4.js` (portada, búsqueda, listados, router, `init`). El script de ensamblado falla si la huella de los datos cambia. Si en el repositorio solo existe `index.html`, trátalo como la versión ensamblada; al separar archivos, conserva esa verificación de integridad.
+En el entorno de desarrollo la app se arma desde piezas: `head.html` + `style.css` + `body.html` + `data.js` (bloque clínico, **protegido por huella SHA-256 que empieza por `b72a16881725768c`**) + `app1.js` (iconos, almacenamiento, taxonomía) + `calc.js` + `srch.js` + `app2.js` (shell, diálogos, barra lateral y barra inferior) + `app6.js` (enlaces a guías) + `app3.js` (ficha, calculadora, referencia) + `app5.js` (aprendizaje) + `app7.js` (cuentas, sincronización, sugerencias y revisión) + `app4.js` (portada, búsqueda, listados, router, `init`). El script de ensamblado falla si la huella de los datos cambia. Si en el repositorio solo existe `index.html`, trátalo como la versión ensamblada; al separar archivos, conserva esa verificación de integridad.
 
 ## 7. Pruebas (Playwright, Python)
 
@@ -244,7 +266,10 @@ Recomendado: moverlas a `tests/` y ejecutarlas con GitHub Actions en cada push.
 | 6.0 | Modo oscuro, barra inferior, alertas de dosis, búsqueda tolerante a errores, aviso al copiar |
 | 7.0 | Rediseño completo: navegación por contexto/sistema/herramienta, hoja inferior Explorar, barra lateral colapsable, nueva portada, ficha con resumen y navegación interna, evidencia desplegable, copia por orden, favoritos y recientes, panel del paciente, tokens nuevos, logo SVG, iconos vectoriales |
 | 7.1 | Aprendizaje: modo Turno/Estudio ("Piensa primero"), repaso espaciado de lo consultado, "¿Lo sabías?" y mapa de dependencia |
-| **7.2** | Dos modos visibles: **Búsqueda rápida** (órdenes primero, evidencia compacta) y **Estudio** (flujo → antes de ordenar → piensa primero → órdenes). Selector segmentado en portada, Explorar y barra lateral, y píldora en la ficha. Enter abre el primer resultado. Búsqueda con prioridad a coincidencia exacta (`PRIO`) y leve penalización de fichas pediátricas y calculadoras en empates |
+| 7.2 | Dos modos visibles: **Búsqueda rápida** (órdenes primero, evidencia compacta) y **Estudio** (flujo → antes de ordenar → piensa primero → órdenes). Selector segmentado en portada, Explorar y barra lateral, y píldora en la ficha. Enter abre el primer resultado. Búsqueda con prioridad a coincidencia exacta (`PRIO`) y leve penalización de fichas pediátricas y calculadoras en empates |
+| 7.3 | Enlaces a las guías en la sección Evidencia: documento oficial verificado (6 fuentes colombianas: toxicología 2017, embarazo 2013, SCA 2013, VIH 2021, Res. 3280, Ley 1616) o portal de GPC del MinSalud; sitios oficiales de más de 60 sociedades internacionales; búsqueda en PubMed y en sitios oficiales como respaldo |
+| 7.4 | Urología pasa a ser una categoría propia (21 fichas), separada de Cirugía y trauma / Ortopedia |
+| **7.5** | Calculadoras separadas: Obstetricia / Pediatría / Urología / Ortopedia / Tromboprofilaxis (`CALC_GROUP`, `grp()`). Cuentas opcionales con Supabase: registro con autorización de datos (Ley 1581), sincronización de favoritos, recientes, notas, repaso y modo; "Mis notas" por ficha; "Sugerir corrección"; panel de revisión para el personal (`role='staff'`); política de privacidad (#privacidad). Bloqueo de textos que parecen datos de pacientes |
 
 ---
 
