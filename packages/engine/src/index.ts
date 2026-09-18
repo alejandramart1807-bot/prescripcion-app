@@ -16,3 +16,5 @@ export type {
   CalcAlteplase,
   ResultadoCalculo,
 } from "./types.js";
+export { calcularInfusion, formatearInfusion, esInfusion } from "./infusion.js";
+export type { Infusion, TipoInfusion } from "./infusion.js";
