@@ -1,5 +1,5 @@
 // Primero red (así ves las actualizaciones al instante); sin señal, usa la copia guardada.
-const CACHE = "tinterno-v7-0";
+const CACHE = "tinterno-v7-2";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./icon.svg"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
