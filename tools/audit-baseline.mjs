@@ -47,7 +47,7 @@ function textoFicha(d) {
   const g = GUIDES[d.id] || d.g;
   const L = [`TINTERNO — ${d.name}`];
   if (g) L.push(`Guías: ${g.co.st === 'none' || g.co.st === 'na' ? '(sin GPC colombiana)' : g.co.n + ' ' + g.co.y} · ${g.intl}`);
-  L.push(`Peso: ${fmt(globalThis.__kg) || 'no registrado'}`);
+  L.push(globalThis.__kg > 0 ? `Peso: ${fmt(globalThis.__kg)} kg` : 'Peso: no registrado (dosis por kilo sin calcular)');
   d.orders.forEach(o => { if (o.cat) { L.push('', o.cat.toUpperCase()); return; } n++; L.push(orderLine(d, o, n)); });
   if (d.goals?.length) L.push('', 'Metas: ' + d.goals.join('; '));
   return L.join('\n');

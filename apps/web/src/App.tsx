@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useHashRoute } from "./lib/useHashRoute";
 import HomePage from "./pages/HomePage";
 import CalculatorPage from "./pages/CalculatorPage";
@@ -22,8 +23,27 @@ function contenido(route: ReturnType<typeof useHashRoute>) {
   return <HomePage />;
 }
 
+const TITULO_BASE = "Tinterno · Guía clínica para el turno";
+
+/** La v7 actualiza el título por ruta; sin esto el historial y las pestañas
+ *  compartidas pierden el nombre de la ficha. */
+function tituloDe(route: ReturnType<typeof useHashRoute>): string {
+  if (route.name === "ficha") {
+    const d = DX.find((x) => x.id === route.id);
+    return d ? `${d.name} · Tinterno` : TITULO_BASE;
+  }
+  if (route.name === "buscar") return "Buscar · Tinterno";
+  if (route.name === "favoritos") return "Favoritos · Tinterno";
+  if (route.name === "acerca") return "Cómo funciona · Tinterno";
+  return TITULO_BASE;
+}
+
 export default function App() {
   const route = useHashRoute();
+
+  useEffect(() => {
+    document.title = tituloDe(route);
+  }, [route]);
 
   return (
     <div className="app-shell">
