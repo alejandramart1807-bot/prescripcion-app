@@ -1,0 +1,10 @@
+CÓMO SUBIRLO A NETLIFY
+1. Descomprime este .zip: te queda la carpeta "prescripcion-app".
+2. Entra a app.netlify.com con tu cuenta > Sites > arrastra la carpeta completa.
+3. En Site settings > Change site name, ponle un nombre (ej. prescripcion-jacobo).
+4. Abre el link en el celular y agrégalo a la pantalla de inicio.
+
+CÓMO ACTUALIZAR
+Reemplaza index.html por la versión nueva y en Netlify > tu sitio > Deploys
+arrastra de nuevo la carpeta completa. El link no cambia.
+En sw.js cambia CACHE = "prescripcion-v5-1" por la versión nueva (ej. v5-2).
