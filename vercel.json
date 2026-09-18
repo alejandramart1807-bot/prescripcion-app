@@ -1,0 +1,35 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "//": "FASE 1 (actual): se despliega la app v7.0 que funciona, desde la raíz, sin build.",
+  "//2": "FASE 2: cuando apps/web alcance paridad, cambiar a:",
+  "//3": "  buildCommand: 'pnpm --filter web build', installCommand: 'pnpm install', outputDirectory: 'apps/web/dist'",
+
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "trailingSlash": false,
+
+  "headers": [
+    {
+      "//": "App de dosificación: un celular pegado en una versión vieja es riesgo clínico.",
+      "source": "/(index.html|sw.js|manifest.webmanifest)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

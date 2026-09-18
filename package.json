@@ -1,0 +1,17 @@
+{
+  "name": "tinterno-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Tinterno — PWA de apoyo clínico para médicos en turno en Colombia. Monorepo (migración en curso desde index.html único).",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@12.4.2",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm -r --filter=./apps/* --filter=./packages/* build",
+    "lint": "pnpm -r --if-present lint",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "clean": "pnpm -r --if-present clean"
+  }
+}

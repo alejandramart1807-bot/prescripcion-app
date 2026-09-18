@@ -1,0 +1,18 @@
+{
+  "name": "@tinterno/content",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Contenido clínico de Tinterno (358 fichas: prescripción, calculadoras y valores de referencia). Generado por tools/extract-content.mjs a partir de index.html — no editar a mano.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

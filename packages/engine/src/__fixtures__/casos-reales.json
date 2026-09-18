@@ -1,0 +1,10753 @@
+[
+ {
+  "id": "reanimacion#6 — Cristaloide en bolo",
+  "calc": {
+   "t": "kg",
+   "lo": 30,
+   "hi": 30,
+   "unit": "mL",
+   "label": "30 mL/kg ="
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 30 mL/kg = 30 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mL/kg = 90 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 30 mL/kg = 300 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30 mL/kg = 900 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 30 mL/kg = 2.100 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 30 mL/kg = 3.600 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 30 mL/kg = 6.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 30 mL/kg = 7.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "analgesia#4 — Morfina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.05,
+   "hi": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–0,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–7 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–12 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10–20 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5–25 mg"
+   }
+  ]
+ },
+ {
+  "id": "anest-locales#0 — Lidocaína sin epinefrina",
+  "calc": {
+   "t": "kg",
+   "lo": 4.5,
+   "hi": 4.5,
+   "unit": "mg",
+   "max": 300
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 4,5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 13,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 45 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 135 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 300 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 300 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 300 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 300 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "anest-locales#1 — Lidocaína con epinefrina",
+  "calc": {
+   "t": "kg",
+   "lo": 7,
+   "hi": 7,
+   "unit": "mg",
+   "max": 500
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 7 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 21 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 70 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 210 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 490 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 500 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "anest-locales#2 — Bupivacaína",
+  "calc": {
+   "t": "kg",
+   "lo": 2.5,
+   "hi": 2.5,
+   "unit": "mg",
+   "max": 175
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2,5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 7,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 25 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 75 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 175 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 175 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 175 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 175 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "anest-locales#3 — Ropivacaína",
+  "calc": {
+   "t": "kg",
+   "lo": 3,
+   "hi": 3,
+   "unit": "mg",
+   "max": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 9 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 30 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 90 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 200 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 200 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 200 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "anest-locales#5 — Emulsión lipídica 20 %",
+  "calc": {
+   "t": "kg",
+   "lo": 1.5,
+   "hi": 1.5,
+   "unit": "mL",
+   "label": "bolo"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → bolo 1,5 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → bolo 4,5 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → bolo 15 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → bolo 45 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → bolo 105 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → bolo 180 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → bolo 300 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → bolo 375 mL"
+   }
+  ]
+ },
+ {
+  "id": "bradi#4 — Dopamina (si atropina falla)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 5,
+   "hi": 20,
+   "conc": 1600
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–0,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–2,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–7,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–22,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–52,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–90 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–150 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–187,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "bradi#5 — Adrenalina (alternativa)",
+  "calc": {
+   "t": "min",
+   "lo": 2,
+   "hi": 10,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 7,5–37,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "taqui#2 — Sedoanalgesia para la cardioversión",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.2,
+   "unit": "mg",
+   "label": "etomidato"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → etomidato 0,1–0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → etomidato 0,3–0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → etomidato 1–2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → etomidato 3–6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → etomidato 7–14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → etomidato 12–24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → etomidato 20–40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → etomidato 25–50 mg"
+   }
+  ]
+ },
+ {
+  "id": "taqui#9 — Amiodarona",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 1,
+   "conc": 1.8,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "fa-inest#3 — Heparina no fraccionada",
+  "calc": {
+   "t": "kgh",
+   "lo": 12,
+   "hi": 18,
+   "conc": 100,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,4–0,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,2–1,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3,6–5,4 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 8,4–12,6 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 14,4–21,6 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 24–36 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 30–45 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "fa-inest#4 — o Enoxaparina",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "por dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → por dosis 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → por dosis 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → por dosis 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → por dosis 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → por dosis 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → por dosis 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → por dosis 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → por dosis 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "fa-inest#6 — Sedoanalgesia",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.2,
+   "unit": "mg",
+   "label": "etomidato"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → etomidato 0,1–0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → etomidato 0,3–0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → etomidato 1–2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → etomidato 3–6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → etomidato 7–14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → etomidato 12–24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → etomidato 20–40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → etomidato 25–50 mg"
+   }
+  ]
+ },
+ {
+  "id": "fa-inest#9 — Amiodarona",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 1,
+   "conc": 1.8,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 16,7–33,3 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "fa-24#2 — Diltiazem (alternativa)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.25,
+   "hi": 0.25,
+   "unit": "mg",
+   "label": "1.ª dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1.ª dosis 0,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1.ª dosis 0,8 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1.ª dosis 2,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.ª dosis 7,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.ª dosis 17,5 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.ª dosis 30 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.ª dosis 50 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.ª dosis 62,5 mg"
+   }
+  ]
+ },
+ {
+  "id": "fa-24#7 — Amiodarona (con o sin cardiopatía estructural)",
+  "calc": {
+   "t": "kg",
+   "lo": 5,
+   "hi": 7,
+   "unit": "mg",
+   "label": "carga",
+   "max": null
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 5–7 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 15–21 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 50–70 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 150–210 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 350–490 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 600–840 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 1.000–1.400 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 1.250–1.750 mg"
+   }
+  ]
+ },
+ {
+  "id": "fa-24#8 — Propafenona (sin cardiopatía estructural)",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     70,
+     "450 mg VO"
+    ],
+    [
+     999,
+     "600 mg VO"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 450 mg VO"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 450 mg VO"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 450 mg VO"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 450 mg VO"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 600 mg VO"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 600 mg VO"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 600 mg VO"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 600 mg VO"
+   }
+  ]
+ },
+ {
+  "id": "fa-24#10 — Enoxaparina o anticoagulante oral directo antes de la cardioversión",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "enoxaparina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → enoxaparina 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → enoxaparina 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → enoxaparina 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → enoxaparina 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → enoxaparina 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → enoxaparina 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → enoxaparina 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → enoxaparina 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "fa-mas24#7 — o Enoxaparina (puente / hospitalizado)",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "por dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → por dosis 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → por dosis 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → por dosis 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → por dosis 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → por dosis 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → por dosis 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → por dosis 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → por dosis 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "iamcest-icp#6 — Heparina no fraccionada (en sala de hemodinamia)",
+  "calc": {
+   "t": "kg",
+   "lo": 70,
+   "hi": 100,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 70–100 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 210–300 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 700–1.000 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2.100–3.000 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4.900–7.000 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 8.400–12.000 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 14.000–20.000 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 17.500–25.000 U"
+   }
+  ]
+ },
+ {
+  "id": "iamcest-tl#1 — Tenecteplasa (5 mg/mL)",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     60,
+     "30 mg (6 mL)"
+    ],
+    [
+     70,
+     "35 mg (7 mL)"
+    ],
+    [
+     80,
+     "40 mg (8 mL)"
+    ],
+    [
+     90,
+     "45 mg (9 mL)"
+    ],
+    [
+     999,
+     "50 mg (10 mL)"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 30 mg (6 mL)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mg (6 mL)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 30 mg (6 mL)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30 mg (6 mL)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 40 mg (8 mL)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 50 mg (10 mL)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 50 mg (10 mL)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 50 mg (10 mL)"
+   }
+  ]
+ },
+ {
+  "id": "iamcest-tl#2 — o Alteplasa",
+  "calc": {
+   "t": "alteplase"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 15 mg + 0,8 mg + 0,5 mg = 16,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 15 mg + 2,3 mg + 1,5 mg = 18,8 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 15 mg + 7,5 mg + 5 mg = 27,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15 mg + 22,5 mg + 15 mg = 52,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 15 mg + 50 mg + 35 mg = 100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 15 mg + 50 mg + 35 mg = 100 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 15 mg + 50 mg + 35 mg = 100 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 15 mg + 50 mg + 35 mg = 100 mg"
+   }
+  ]
+ },
+ {
+  "id": "iamcest-tl#7 — Enoxaparina (< 75 años)",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "SC",
+   "max": 100
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → SC 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → SC 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → SC 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → SC 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → SC 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → SC 100 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → SC 100 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → SC 100 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "iamcest-tl#8 — Enoxaparina (≥ 75 años)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.75,
+   "hi": 0.75,
+   "unit": "mg",
+   "label": "SC",
+   "max": 75
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → SC 0,8 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → SC 2,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → SC 7,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → SC 22,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → SC 52,5 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → SC 75 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → SC 75 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → SC 75 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "iamsest#5 — Enoxaparina",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "por dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → por dosis 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → por dosis 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → por dosis 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → por dosis 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → por dosis 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → por dosis 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → por dosis 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → por dosis 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "iamsest#7 — o Heparina no fraccionada",
+  "calc": {
+   "t": "kgh",
+   "lo": 12,
+   "hi": 12,
+   "conc": 100,
+   "unit": "U",
+   "maxRate": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1 mL/h (12 U/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,4 mL/h (36 U/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,2 mL/h (120 U/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3,6 mL/h (360 U/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 8,4 mL/h (840 U/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → Tope máximo aplicado · 10 mL/h (1.000 U/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → Tope máximo aplicado · 10 mL/h (1.000 U/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → Tope máximo aplicado · 10 mL/h (1.000 U/h)"
+   }
+  ]
+ },
+ {
+  "id": "iamsest#9 — Nitroglicerina",
+  "calc": {
+   "t": "min",
+   "lo": 5,
+   "hi": 10,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 1,5–3 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 1,5–3 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-general#1 — Labetalol",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 30–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-general#2 — Nicardipino",
+  "calc": {
+   "t": "h",
+   "lo": 5,
+   "hi": 15,
+   "conc": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 50–150 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-general#3 — Nitroprusiato",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.3,
+   "hi": 5,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–1,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–4,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,9–15 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2,7–45 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 6,3–105 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10,8–180 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 18–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 22,5–375 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-general#4 — Nitroglicerina",
+  "calc": {
+   "t": "min",
+   "lo": 5,
+   "hi": 200,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 1,5–60 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-general#5 — Esmolol",
+  "calc": {
+   "t": "kgmin",
+   "lo": 50,
+   "hi": 300,
+   "conc": 10000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,3–1,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,9–5,4 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 3–18 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 9–54 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 21–126 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 36–216 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 60–360 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 75–450 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-encef#0 — Labetalol",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 30–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-encef#1 — o Nicardipino",
+  "calc": {
+   "t": "h",
+   "lo": 5,
+   "hi": 15,
+   "conc": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 50–150 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-encef#2 — o Nitroprusiato (si no hay alternativa)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.3,
+   "hi": 5,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–1,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–4,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,9–15 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2,7–45 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 6,3–105 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10,8–180 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 18–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 22,5–375 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-hic#0 — Labetalol",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 30–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-hic#1 — o Nicardipino",
+  "calc": {
+   "t": "h",
+   "lo": 5,
+   "hi": 15,
+   "conc": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 50–150 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-isq#0 — Labetalol",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 30–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-isq#1 — o Nicardipino",
+  "calc": {
+   "t": "h",
+   "lo": 5,
+   "hi": 15,
+   "conc": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 50–150 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 50–150 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-eap#1 — Nitroglicerina",
+  "calc": {
+   "t": "min",
+   "lo": 20,
+   "hi": 200,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 6–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 6–60 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-eap#3 — Nitroprusiato (refractario)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.3,
+   "hi": 5,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–1,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–4,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,9–15 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2,7–45 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 6,3–105 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10,8–180 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 18–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 22,5–375 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-aorta#0 — Esmolol",
+  "calc": {
+   "t": "kgmin",
+   "lo": 50,
+   "hi": 300,
+   "conc": 10000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,3–1,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,9–5,4 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 3–18 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 9–54 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 21–126 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 36–216 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 60–360 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 75–450 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-aorta#1 — o Labetalol",
+  "calc": {
+   "t": "min",
+   "lo": 0.5,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 30–120 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 30–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-aorta#2 — Nitroprusiato (después del betabloqueo)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.3,
+   "hi": 5,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–1,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–4,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,9–15 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2,7–45 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 6,3–105 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10,8–180 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 18–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 22,5–375 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-sca#0 — Nitroglicerina",
+  "calc": {
+   "t": "min",
+   "lo": 5,
+   "hi": 200,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 1,5–60 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "he-eclamp#2 — Mantenimiento",
+  "calc": {
+   "t": "h",
+   "lo": 1,
+   "hi": 2,
+   "conc": 0.02,
+   "unit": "g"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 50–100 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 50–100 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "ica#4 — Nitroglicerina (si PAS > 110)",
+  "calc": {
+   "t": "min",
+   "lo": 10,
+   "hi": 200,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 3–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 3–60 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "ica#6 — Dobutamina",
+  "calc": {
+   "t": "kgmin",
+   "lo": 2,
+   "hi": 20,
+   "conc": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–1,2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,4–3,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,2–12 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3,6–36 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 8,4–84 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 14,4–144 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 24–240 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 30–300 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "ica#7 — Noradrenalina (si PAM < 65)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.5,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–5,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–18,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–56,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–131,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–225 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–375 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–468,8 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "tvp#2 — o Enoxaparina",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "por dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → por dosis 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → por dosis 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → por dosis 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → por dosis 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → por dosis 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → por dosis 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → por dosis 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → por dosis 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "tvp#3 — o Heparina no fraccionada (ClCr < 30, procedimiento cercano, riesgo de sangrado)",
+  "calc": {
+   "t": "kgh",
+   "lo": 18,
+   "hi": 18,
+   "conc": 100,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mL/h (18 U/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5 mL/h (54 U/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,8 mL/h (180 U/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,4 mL/h (540 U/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 12,6 mL/h (1.260 U/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 21,6 mL/h (2.160 U/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 36 mL/h (3.600 U/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 45 mL/h (4.500 U/h)"
+   }
+  ]
+ },
+ {
+  "id": "profilaxis-qx#1 — Cefazolina",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     120,
+     "2 g IV"
+    ],
+    [
+     999,
+     "3 g IV"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2 g IV"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 2 g IV"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 g IV"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2 g IV"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2 g IV"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 3 g IV"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 3 g IV"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 3 g IV"
+   }
+  ]
+ },
+ {
+  "id": "profilaxis-qx#3 — Alergia grave",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 15,
+   "unit": "mg",
+   "label": "vancomicina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → vancomicina 15 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → vancomicina 45 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → vancomicina 150 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → vancomicina 450 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → vancomicina 1.050 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → vancomicina 1.800 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → vancomicina 3.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → vancomicina 3.750 mg"
+   }
+  ]
+ },
+ {
+  "id": "tce#3 — Hipertensión endocraneana",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "g",
+   "label": "manitol"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → manitol 0,5–1 g"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → manitol 1,5–3 g"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → manitol 5–10 g"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → manitol 15–30 g"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → manitol 35–70 g"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → manitol 60–120 g"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → manitol 100–200 g"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → manitol 125–250 g"
+   }
+  ]
+ },
+ {
+  "id": "neumotorax#2 — Analgesia para el tubo",
+  "calc": {
+   "t": "kg",
+   "lo": 4.5,
+   "hi": 4.5,
+   "unit": "mg",
+   "label": "máx lidocaína",
+   "max": 300
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → máx lidocaína 4,5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → máx lidocaína 13,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → máx lidocaína 45 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → máx lidocaína 135 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → máx lidocaína 300 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → máx lidocaína 300 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → máx lidocaína 300 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → máx lidocaína 300 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "anafilaxia#1 — Adrenalina (1 mg/mL)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.01,
+   "hi": 0.01,
+   "unit": "mg",
+   "max": 0.5
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 0,5 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 0,5 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 0,5 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 0,5 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "anafilaxia#2 — SSN 0,9 %",
+  "calc": {
+   "t": "kg",
+   "lo": 20,
+   "hi": 20,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 20 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 60 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 200 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 600 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.400 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.400 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5.000 mL"
+   }
+  ]
+ },
+ {
+  "id": "anafilaxia#4 — Adrenalina en infusión (refractaria)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.3,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,1 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–3,4 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–11,3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–33,8 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–78,8 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–135 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–225 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–281,3 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "contacto#3 — Prednisona (grave)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "mg",
+   "label": "/día",
+   "max": 60
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–10 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–30 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–60 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 60 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 60 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "escabiosis#2 — Ivermectina (alternativa o brotes)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.2,
+   "hi": 0.2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 50 mg"
+   }
+  ]
+ },
+ {
+  "id": "zoster#5 — Diseminado o inmunosuprimido grave",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 700 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.200 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.500 mg"
+   }
+  ]
+ },
+ {
+  "id": "larva#1 — Ivermectina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.2,
+   "hi": 0.2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 50 mg"
+   }
+  ]
+ },
+ {
+  "id": "toxicodermias#3 — SJS/NET: inmunomodulación",
+  "calc": {
+   "t": "kg",
+   "lo": 3,
+   "hi": 5,
+   "unit": "mg",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 3–5 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 9–15 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 30–50 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 90–150 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 210–350 mg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 360–600 mg /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 600–1.000 mg /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 750–1.250 mg /día"
+   }
+  ]
+ },
+ {
+  "id": "toxicodermias#4 — DRESS",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "mg",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–10 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–30 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–70 mg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–120 mg /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100–200 mg /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125–250 mg /día"
+   }
+  ]
+ },
+ {
+  "id": "cad#1 — Lactato de Ringer o SSN 0,9 %",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 20,
+   "unit": "mL",
+   "label": "1.ª hora"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1.ª hora 15–20 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1.ª hora 45–60 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1.ª hora 150–200 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.ª hora 450–600 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.ª hora 1.050–1.400 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.ª hora 1.800–2.400 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.ª hora 3.000–4.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.ª hora 3.750–5.000 mL"
+   }
+  ]
+ },
+ {
+  "id": "cad#5 — Insulina regular en infusión",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.1,
+   "hi": 0.1,
+   "conc": 1,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1 mL/h (0 U/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3 mL/h (0 U/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1 mL/h (1 U/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3 mL/h (3 U/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7 mL/h (7 U/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12 mL/h (12 U/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20 mL/h (20 U/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25 mL/h (25 U/h)"
+   }
+  ]
+ },
+ {
+  "id": "cad#6 — Dextrosa cuando glucosa < 250 mg/dL",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.05,
+   "hi": 0.05,
+   "conc": 1,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1 mL/h (0 U/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2 mL/h (0 U/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5 mL/h (1 U/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5 mL/h (2 U/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5 mL/h (4 U/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6 mL/h (6 U/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10 mL/h (10 U/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5 mL/h (13 U/h)"
+   }
+  ]
+ },
+ {
+  "id": "cad#9 — Transición a insulina SC",
+  "calc": {
+   "t": "kg",
+   "lo": 0.2,
+   "hi": 0.3,
+   "unit": "U",
+   "label": "basal/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → basal/día 0–0 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → basal/día 1–1 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → basal/día 2–3 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → basal/día 6–9 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → basal/día 14–21 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → basal/día 24–36 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → basal/día 40–60 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → basal/día 50–75 U"
+   }
+  ]
+ },
+ {
+  "id": "ehh#2 — Insulina regular en infusión",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.05,
+   "hi": 0.05,
+   "conc": 1,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1 mL/h (0 U/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2 mL/h (0 U/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5 mL/h (1 U/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5 mL/h (2 U/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5 mL/h (4 U/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6 mL/h (6 U/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10 mL/h (10 U/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5 mL/h (13 U/h)"
+   }
+  ]
+ },
+ {
+  "id": "hiperglu#2 — Ajuste del tratamiento de base",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.2,
+   "unit": "U",
+   "label": "basal/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → basal/día 0–0 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → basal/día 0–1 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → basal/día 1–2 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → basal/día 3–6 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → basal/día 7–14 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → basal/día 12–24 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → basal/día 20–40 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → basal/día 25–50 U"
+   }
+  ]
+ },
+ {
+  "id": "panc#0 — Lactato de Ringer",
+  "calc": {
+   "t": "kgh",
+   "lo": 1.5,
+   "hi": 1.5,
+   "conc": 1,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1,5 mL/h (2 mL/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 4,5 mL/h (5 mL/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 15 mL/h (15 mL/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 45 mL/h (45 mL/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 105 mL/h (105 mL/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 180 mL/h (180 mL/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 300 mL/h (300 mL/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 375 mL/h (375 mL/h)"
+   }
+  ]
+ },
+ {
+  "id": "pbe#2 — Albúmina 20 %",
+  "calc": {
+   "t": "kg",
+   "lo": 1.5,
+   "hi": 1.5,
+   "unit": "g",
+   "label": "día 1"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → día 1 1,5 g"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → día 1 4,5 g"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → día 1 15 g"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → día 1 45 g"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → día 1 105 g"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → día 1 180 g"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → día 1 300 g"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → día 1 375 g"
+   }
+  ]
+ },
+ {
+  "id": "shr#0 — Albúmina 20 %",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "g",
+   "label": "/día",
+   "max": 100
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1 g /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3 g /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10 g /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30 g /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70 g /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 100 g /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100 g /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 100 g /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "diarrea#1 — Deshidratación grave: Lactato de Ringer",
+  "calc": {
+   "t": "kg",
+   "lo": 20,
+   "hi": 30,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 20–30 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 60–90 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 200–300 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 600–900 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.400–2.100 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.400–3.600 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.000–6.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5.000–7.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "sua#1 — Ácido tranexámico",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mg",
+   "max": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 700 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "triple-i#1 — Ampicilina + gentamicina",
+  "calc": {
+   "t": "kg",
+   "lo": 5,
+   "hi": 5,
+   "unit": "mg",
+   "label": "gentamicina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → gentamicina 5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → gentamicina 15 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → gentamicina 50 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → gentamicina 150 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → gentamicina 350 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → gentamicina 600 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → gentamicina 1.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → gentamicina 1.250 mg"
+   }
+  ]
+ },
+ {
+  "id": "endometritis#1 — Clindamicina + gentamicina",
+  "calc": {
+   "t": "kg",
+   "lo": 5,
+   "hi": 5,
+   "unit": "mg",
+   "label": "gentamicina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → gentamicina 5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → gentamicina 15 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → gentamicina 50 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → gentamicina 150 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → gentamicina 350 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → gentamicina 600 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → gentamicina 1.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → gentamicina 1.250 mg"
+   }
+  ]
+ },
+ {
+  "id": "dmg#2 — Ayunas altas",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.2,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0–0 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0–1 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1–2 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3–6 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7–14 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12–24 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20–40 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25–50 U"
+   }
+  ]
+ },
+ {
+  "id": "oxitocina#1 — Oxitocina",
+  "calc": {
+   "t": "min",
+   "lo": 1,
+   "hi": 20,
+   "conc": 10,
+   "unit": "mU"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 6–120 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 6–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "cvo#0 — Morfina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.1,
+   "unit": "mg",
+   "label": "dosis",
+   "max": 10
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → dosis 0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → dosis 0,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → dosis 1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → dosis 3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → dosis 7 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → dosis 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → dosis 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → dosis 10 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "cvo#2 — Ketamina en dosis subanestésica (dolor refractario)",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.1,
+   "hi": 0.3,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,3 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–0,9 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1–3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3–9 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7–21 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12–36 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25–75 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "rt-hemol#1 — SSN 0,9 %",
+  "calc": {
+   "t": "kgh",
+   "lo": 1,
+   "hi": 1,
+   "conc": 1,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1 mL/h (1 mL/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3 mL/h (3 mL/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10 mL/h (10 mL/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30 mL/h (30 mL/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70 mL/h (70 mL/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120 mL/h (120 mL/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200 mL/h (200 mL/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250 mL/h (250 mL/h)"
+   }
+  ]
+ },
+ {
+  "id": "rt-hemol#3 — Vasopresor si hipotensión persistente",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.5,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–5,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–18,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–56,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–131,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–225 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–375 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–468,8 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "rt-anaf#0 — Adrenalina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.01,
+   "hi": 0.01,
+   "unit": "mg",
+   "max": 0.5
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 0,5 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 0,5 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 0,5 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 0,5 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "crio#0 — Crioprecipitado",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.1,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25 U"
+   }
+  ]
+ },
+ {
+  "id": "plq#0 — Plaquetas",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.1,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25 U"
+   }
+  ]
+ },
+ {
+  "id": "pfc#0 — Plasma fresco congelado",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 15,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10–15 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30–45 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100–150 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300–450 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 700–1.050 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.200–1.800 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.000–3.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.500–3.750 mL"
+   }
+  ]
+ },
+ {
+  "id": "dengue#5 — Grupo B2: cristaloide",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mL",
+   "label": "bolo 1 h"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → bolo 1 h 10 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → bolo 1 h 30 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → bolo 1 h 100 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → bolo 1 h 300 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → bolo 1 h 700 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → bolo 1 h 1.200 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → bolo 1 h 2.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → bolo 1 h 2.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "dengue#6 — Grupo C (shock): cristaloide",
+  "calc": {
+   "t": "kg",
+   "lo": 20,
+   "hi": 20,
+   "unit": "mL",
+   "label": "bolo"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → bolo 20 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → bolo 60 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → bolo 200 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → bolo 600 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → bolo 1.400 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → bolo 2.400 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → bolo 4.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → bolo 5.000 mL"
+   }
+  ]
+ },
+ {
+  "id": "tb#1 — Fase intensiva (2 meses): HRZE en dosis fijas combinadas",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     40,
+     "2 tabletas/día (30–39 kg)"
+    ],
+    [
+     55,
+     "3 tabletas/día (40–54 kg)"
+    ],
+    [
+     71,
+     "4 tabletas/día (55–70 kg)"
+    ],
+    [
+     999,
+     "5 tabletas/día (> 70 kg)"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2 tabletas/día (30–39 kg)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 2 tabletas/día (30–39 kg)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 tabletas/día (30–39 kg)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2 tabletas/día (30–39 kg)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4 tabletas/día (55–70 kg)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 5 tabletas/día (> 70 kg)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 5 tabletas/día (> 70 kg)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5 tabletas/día (> 70 kg)"
+   }
+  ]
+ },
+ {
+  "id": "hiperca#1 — Calcitonina",
+  "calc": {
+   "t": "kg",
+   "lo": 4,
+   "hi": 4,
+   "unit": "UI"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 4 UI"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 12 UI"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 40 UI"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 120 UI"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 280 UI"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 480 UI"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 800 UI"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000 UI"
+   }
+  ]
+ },
+ {
+  "id": "hipoca#1 — Infusión de calcio si persiste",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.5,
+   "hi": 1.5,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–4,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–15 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–45 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–105 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–180 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125–375 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "tep#0 — Enoxaparina",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "por dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → por dosis 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → por dosis 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → por dosis 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → por dosis 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → por dosis 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → por dosis 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → por dosis 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → por dosis 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "tep#1 — Heparina no fraccionada (inestable, candidato a trombólisis, ClCr < 30)",
+  "calc": {
+   "t": "kgh",
+   "lo": 18,
+   "hi": 18,
+   "conc": 100,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mL/h (18 U/h)"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5 mL/h (54 U/h)"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,8 mL/h (180 U/h)"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,4 mL/h (540 U/h)"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 12,6 mL/h (1.260 U/h)"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 21,6 mL/h (2.160 U/h)"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 36 mL/h (3.600 U/h)"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 45 mL/h (4.500 U/h)"
+   }
+  ]
+ },
+ {
+  "id": "tep#3 — Noradrenalina si hipotensión",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.5,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–5,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–18,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–56,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–131,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–225 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–375 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–468,8 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "hic#9 — Manitol 20 %",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "g"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1 g"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3 g"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–10 g"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–30 g"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–70 g"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–120 g"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100–200 g"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125–250 g"
+   }
+  ]
+ },
+ {
+  "id": "acvi#0 — Alteplasa",
+  "calc": {
+   "t": "altacv"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → total 0,9 mg: bolo 0,1 mg + 0,8 mg en 60 min"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → total 2,7 mg: bolo 0,3 mg + 2,4 mg en 60 min"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → total 9 mg: bolo 0,9 mg + 8,1 mg en 60 min"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → total 27 mg: bolo 2,7 mg + 24,3 mg en 60 min"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → total 63 mg: bolo 6,3 mg + 56,7 mg en 60 min"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → total 90 mg: bolo 9 mg + 81 mg en 60 min"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → total 90 mg: bolo 9 mg + 81 mg en 60 min"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → total 90 mg: bolo 9 mg + 81 mg en 60 min"
+   }
+  ]
+ },
+ {
+  "id": "acvi#1 — Tenecteplasa (alternativa preferida donde esté)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.25,
+   "hi": 0.25,
+   "unit": "mg",
+   "max": 25
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,8 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 7,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 17,5 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 25 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 25 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ee#1 — Levetiracetam",
+  "calc": {
+   "t": "kg",
+   "lo": 60,
+   "hi": 60,
+   "unit": "mg",
+   "max": 4500
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 60 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 180 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 600 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.800 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4.200 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 4.500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 4.500 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ee#4 — Midazolam en infusión (con intubación)",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.05,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–20 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–140 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–240 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10–400 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5–500 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "meningitis#1 — Dexametasona (antes o con la 1.ª dosis)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.15,
+   "hi": 0.15,
+   "unit": "mg",
+   "label": "niño",
+   "max": 10
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → niño 0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → niño 0,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → niño 1,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → niño 4,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → niño 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → niño 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → niño 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → niño 10 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "meningitis#2 — Ceftriaxona",
+  "calc": {
+   "t": "kg",
+   "lo": 100,
+   "hi": 100,
+   "unit": "mg",
+   "label": "niño/día",
+   "max": 4000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → niño/día 100 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → niño/día 300 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → niño/día 1.000 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → niño/día 3.000 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → niño/día 4.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → niño/día 4.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → niño/día 4.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → niño/día 4.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "meningitis#3 — + Vancomicina",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 20,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 15–20 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 45–60 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 150–200 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 450–600 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.050–1.400 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.800–2.400 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 3.000–4.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 3.750–5.000 mg"
+   }
+  ]
+ },
+ {
+  "id": "meningitis#5 — Aciclovir si sospecha de encefalitis",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 700 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.200 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.500 mg"
+   }
+  ]
+ },
+ {
+  "id": "nf#2 — Vancomicina (si infección de catéter, piel, neumonía, inestabilidad o SAMR)",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "lisis-tumoral#3 — Rasburicasa",
+  "calc": {
+   "t": "kg",
+   "lo": 0.2,
+   "hi": 0.2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 50 mg"
+   }
+  ]
+ },
+ {
+  "id": "as#0 — Vancomicina",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ped-antipireticos#0 — Paracetamol",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 15,
+   "unit": "mg",
+   "max": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 15 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 45 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 150 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 450 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ped-antipireticos#1 — Ibuprofeno (≥ 6 meses)",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mg",
+   "max": 400
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 400 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 400 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 400 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 400 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "croup#0 — Dexametasona",
+  "calc": {
+   "t": "kg",
+   "lo": 0.15,
+   "hi": 0.6,
+   "unit": "mg",
+   "max": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–0,6 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5–1,8 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,5–6 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4,5–16 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10,5–16 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 16 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 16 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 16 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "croup#1 — Adrenalina (1 mg/mL) nebulizada",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 0.5,
+   "unit": "mL",
+   "max": 5
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5 mL · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 5 mL · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 5 mL · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 5 mL · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5 mL · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "nac-ped#1 — Amoxicilina",
+  "calc": {
+   "t": "kg",
+   "lo": 90,
+   "hi": 90,
+   "unit": "mg",
+   "label": "/día",
+   "max": 4000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 90 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 270 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 900 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2.700 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 4.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "nac-ped#3 — Ampicilina",
+  "calc": {
+   "t": "kg",
+   "lo": 150,
+   "hi": 200,
+   "unit": "mg",
+   "label": "/día",
+   "max": 12000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 150–200 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 450–600 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1.500–2.000 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4.500–6.000 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10.500–12.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 12.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "nac-ped#4 — Ceftriaxona (grave, no vacunado, complicada)",
+  "calc": {
+   "t": "kg",
+   "lo": 50,
+   "hi": 100,
+   "unit": "mg",
+   "label": "/día",
+   "max": 2000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50–100 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150–300 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500–1.000 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500–2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "oma#0 — Analgesia",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mg",
+   "max": 400
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 400 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 400 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 400 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 400 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "oma#1 — Amoxicilina",
+  "calc": {
+   "t": "kg",
+   "lo": 80,
+   "hi": 90,
+   "unit": "mg",
+   "label": "/día",
+   "max": 4000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 80–90 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 240–270 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 800–900 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2.400–2.700 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 4.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "faringitis-ped#0 — Amoxicilina",
+  "calc": {
+   "t": "kg",
+   "lo": 50,
+   "hi": 50,
+   "unit": "mg",
+   "label": "/día",
+   "max": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "faringitis-ped#1 — Penicilina benzatínica",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     27,
+     "600 000 U IM"
+    ],
+    [
+     999,
+     "1 200 000 U IM"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 600 000 U IM"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 600 000 U IM"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 600 000 U IM"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1 200 000 U IM"
+   }
+  ]
+ },
+ {
+  "id": "faringitis-ped#2 — Alergia no grave",
+  "calc": {
+   "t": "kg",
+   "lo": 20,
+   "hi": 20,
+   "unit": "mg",
+   "max": 500
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 20 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 60 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 200 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 500 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 500 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "asma-ped#1 — Prednisolona",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 2,
+   "unit": "mg",
+   "max": 40
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–20 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 40 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "asma-ped#3 — Sulfato de magnesio (grave)",
+  "calc": {
+   "t": "kg",
+   "lo": 50,
+   "hi": 50,
+   "unit": "mg",
+   "max": 2000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "eda-ped#2 — Plan B",
+  "calc": {
+   "t": "kg",
+   "lo": 75,
+   "hi": 75,
+   "unit": "mL",
+   "label": "en 4 h"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 75 mL en 4 h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 225 mL en 4 h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 750 mL en 4 h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2.250 mL en 4 h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 5.250 mL en 4 h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 9.000 mL en 4 h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 15.000 mL en 4 h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 18.750 mL en 4 h"
+   }
+  ]
+ },
+ {
+  "id": "eda-ped#3 — Plan C",
+  "calc": {
+   "t": "kg",
+   "lo": 100,
+   "hi": 100,
+   "unit": "mL",
+   "label": "total"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 100 mL total"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 300 mL total"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1.000 mL total"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3.000 mL total"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7.000 mL total"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12.000 mL total"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20.000 mL total"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25.000 mL total"
+   }
+  ]
+ },
+ {
+  "id": "eda-ped#4 — Ondansetrón si vómito impide SRO",
+  "calc": {
+   "t": "kg",
+   "lo": 0.15,
+   "hi": 0.15,
+   "unit": "mg",
+   "max": 4
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 4 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 4 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "desnutricion#1 — Hipoglucemia",
+  "calc": {
+   "t": "kg",
+   "lo": 5,
+   "hi": 5,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 5 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 15 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 50 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 150 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 350 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 600 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.250 mL"
+   }
+  ]
+ },
+ {
+  "id": "desnutricion#2 — F-75",
+  "calc": {
+   "t": "kg",
+   "lo": 130,
+   "hi": 130,
+   "unit": "mL",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 130 mL /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 390 mL /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1.300 mL /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3.900 mL /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 9.100 mL /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 15.600 mL /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 26.000 mL /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 32.500 mL /día"
+   }
+  ]
+ },
+ {
+  "id": "parasitosis#1 — Giardia",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 15,
+   "unit": "mg",
+   "label": "/día",
+   "max": 750
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 15 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 45 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 150 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 450 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 750 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 750 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 750 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 750 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "parasitosis#2 — Amebiasis invasiva",
+  "calc": {
+   "t": "kg",
+   "lo": 35,
+   "hi": 50,
+   "unit": "mg",
+   "label": "/día",
+   "max": 2250
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 35–50 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 105–150 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 350–500 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.050–1.500 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2.250 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.250 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.250 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.250 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ivu-ped#0 — Cefalexina",
+  "calc": {
+   "t": "kg",
+   "lo": 50,
+   "hi": 100,
+   "unit": "mg",
+   "label": "/día",
+   "max": 4000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50–100 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150–300 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500–1.000 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500–3.000 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3.500–4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 4.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ivu-ped#1 — Ceftriaxona",
+  "calc": {
+   "t": "kg",
+   "lo": 50,
+   "hi": 75,
+   "unit": "mg",
+   "label": "/día",
+   "max": 2000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50–75 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150–225 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500–750 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500–2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 2.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 2.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "nefrotico#0 — Nefrótico: prednisolona",
+  "calc": {
+   "t": "kg",
+   "lo": 2,
+   "hi": 2,
+   "unit": "mg",
+   "label": "/día",
+   "max": 60
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 6 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 20 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 60 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 60 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 60 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 60 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "nefrotico#1 — Edema refractario",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "g",
+   "label": "albúmina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → albúmina 0,5–1 g"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → albúmina 1,5–3 g"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → albúmina 5–10 g"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → albúmina 15–30 g"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → albúmina 35–70 g"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → albúmina 60–120 g"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → albúmina 100–200 g"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → albúmina 125–250 g"
+   }
+  ]
+ },
+ {
+  "id": "nefrotico#2 — Nefrítico postestreptocócico",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 2,
+   "unit": "mg",
+   "max": 40
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–20 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 40 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 40 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "ictericia-neo#1 — IVIG (hemólisis isoinmune)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "g"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1 g"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3 g"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–10 g"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–30 g"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–70 g"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–120 g"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100–200 g"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125–250 g"
+   }
+  ]
+ },
+ {
+  "id": "hipoglu-neo#0 — Gel de dextrosa 40 %",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 0.5,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125 mL"
+   }
+  ]
+ },
+ {
+  "id": "hipoglu-neo#1 — DAD 10 % en bolo",
+  "calc": {
+   "t": "kg",
+   "lo": 2,
+   "hi": 2,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 6 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 20 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 60 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 140 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 240 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 400 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 500 mL"
+   }
+  ]
+ },
+ {
+  "id": "hipoglu-neo#2 — Infusión de glucosa",
+  "calc": {
+   "t": "kgh",
+   "lo": 3.6,
+   "hi": 4.8,
+   "conc": 1,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 3,6–4,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 10,8–14,4 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 36–48 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 108–144 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 252–336 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 432–576 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 720–960 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 900–1.200 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sepsis-neo#0 — Ampicilina",
+  "calc": {
+   "t": "kg",
+   "lo": 50,
+   "hi": 50,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3.500 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6.000 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12.500 mg"
+   }
+  ]
+ },
+ {
+  "id": "sepsis-neo#1 — + Gentamicina",
+  "calc": {
+   "t": "kg",
+   "lo": 4,
+   "hi": 4,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 4 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 12 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 40 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 120 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 280 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 480 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 800 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000 mg"
+   }
+  ]
+ },
+ {
+  "id": "sifilis-cong#0 — Penicilina G cristalina",
+  "calc": {
+   "t": "kg",
+   "lo": 50000,
+   "hi": 50000,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50.000 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150.000 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500.000 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500.000 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3.500.000 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6.000.000 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10.000.000 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12.500.000 U"
+   }
+  ]
+ },
+ {
+  "id": "sifilis-cong#1 — Penicilina benzatínica (bajo riesgo)",
+  "calc": {
+   "t": "kg",
+   "lo": 50000,
+   "hi": 50000,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 50.000 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 150.000 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 500.000 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1.500.000 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3.500.000 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6.000.000 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10.000.000 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12.500.000 U"
+   }
+  ]
+ },
+ {
+  "id": "crisis-febril#0 — Midazolam bucal o intranasal",
+  "calc": {
+   "t": "kg",
+   "lo": 0.2,
+   "hi": 0.3,
+   "unit": "mg",
+   "max": 10
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–0,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–0,9 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2–3 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 6–9 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 10 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "fiebre-reumatica#0 — Penicilina benzatínica",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     27,
+     "600 000 U IM"
+    ],
+    [
+     999,
+     "1 200 000 U IM"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 600 000 U IM"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 600 000 U IM"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 600 000 U IM"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1 200 000 U IM"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1 200 000 U IM"
+   }
+  ]
+ },
+ {
+  "id": "fiebre-reumatica#1 — Artritis",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 20,
+   "unit": "mg",
+   "label": "/día",
+   "max": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 10–20 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 30–60 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 100–200 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 300–600 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 700–1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 1.000 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "agitacion#3 — Agitación extrema (delirium hiperactivo con riesgo vital)",
+  "calc": {
+   "t": "kg",
+   "lo": 4,
+   "hi": 5,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 4–5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 12–15 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 40–50 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 120–150 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 280–350 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 480–600 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 800–1.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 1.000–1.250 mg"
+   }
+  ]
+ },
+ {
+  "id": "mania#2 — Valproato",
+  "calc": {
+   "t": "kg",
+   "lo": 20,
+   "hi": 30,
+   "unit": "mg",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 20–30 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 60–90 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 200–300 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 600–900 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.400–2.100 mg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2.400–3.600 mg /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4.000–6.000 mg /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5.000–7.500 mg /día"
+   }
+  ]
+ },
+ {
+  "id": "hm-snm#5 — Dantroleno (grave, hipertermia)",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 2.5,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2,5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–7,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–25 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–75 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–175 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–300 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–500 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–625 mg"
+   }
+  ]
+ },
+ {
+  "id": "hm-tdah#1 — Atomoxetina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1.2,
+   "unit": "mg",
+   "label": "/día",
+   "max": 100
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1,2 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3,6 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–12 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–36 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–84 mg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–100 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 100 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "colico-renal#2 — Morfina (rescate)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.1,
+   "unit": "mg",
+   "max": 10
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 10 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "torsion#2 — Analgesia",
+  "calc": {
+   "t": "kg",
+   "lo": 0.05,
+   "hi": 0.1,
+   "unit": "mg",
+   "max": 10
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–0,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–7 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 10 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "obstr-inf#3 — Cristaloide 30 mL/kg si hipotensión o lactato ≥ 4",
+  "calc": {
+   "t": "kg",
+   "lo": 30,
+   "hi": 30,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 30 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 90 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 300 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 900 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2.100 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 3.600 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 6.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 7.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "fournier#1 — Vancomicina",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "crotalico#1 — Líquidos para diuresis 1–2 mL/kg/h",
+  "calc": {
+   "t": "kgh",
+   "lo": 1,
+   "hi": 2,
+   "conc": 1,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–20 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–140 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–240 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–400 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–500 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "intox#0 — Carbón activado",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "g",
+   "max": 50
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1 g"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3 g"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10 g"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30 g"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 50 g · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 50 g · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 50 g · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 50 g · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "atc#0 — Bicarbonato de sodio 8,4 %",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 2,
+   "unit": "mEq"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2 mEq"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–6 mEq"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–20 mEq"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–60 mEq"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–140 mEq"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–240 mEq"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–400 mEq"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–500 mEq"
+   }
+  ]
+ },
+ {
+  "id": "atc#3 — Noradrenalina si hipotensión tras volumen",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.5,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–5,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–18,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–56,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–131,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–225 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–375 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–468,8 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "atc#5 — Emulsión lipídica 20 % (paro o refractario)",
+  "calc": {
+   "t": "kg",
+   "lo": 1.5,
+   "hi": 1.5,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1,5 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 4,5 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 15 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 45 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 105 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 180 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 300 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 375 mL"
+   }
+  ]
+ },
+ {
+  "id": "bb-tox#2 — Glucagón",
+  "calc": {
+   "t": "kg",
+   "lo": 0.05,
+   "hi": 0.15,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–0,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–1,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–4,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–10,5 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–18 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10–30 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5–37,5 mg"
+   }
+  ]
+ },
+ {
+  "id": "bb-tox#3 — Insulina en dosis altas",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "U",
+   "label": "bolo"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → bolo 1 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → bolo 3 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → bolo 10 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → bolo 30 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → bolo 70 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → bolo 120 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → bolo 200 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → bolo 250 U"
+   }
+  ]
+ },
+ {
+  "id": "bb-tox#4 — Vasopresor",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.5,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–5,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–18,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–56,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–131,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–225 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–375 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–468,8 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "of#2 — Pralidoxima (organofosforados)",
+  "calc": {
+   "t": "kg",
+   "lo": 30,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.600 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 6.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 7.500 mg"
+   }
+  ]
+ },
+ {
+  "id": "metanol#0 — Etanol VO/SNG",
+  "calc": {
+   "t": "kg",
+   "lo": 3.5,
+   "hi": 3.5,
+   "unit": "mL",
+   "label": "aguardiente carga"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → aguardiente carga 3,5 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → aguardiente carga 10,5 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → aguardiente carga 35 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → aguardiente carga 105 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → aguardiente carga 245 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → aguardiente carga 420 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → aguardiente carga 700 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → aguardiente carga 875 mL"
+   }
+  ]
+ },
+ {
+  "id": "metanol#1 — Etanol IV al 10 % (alternativa)",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mL",
+   "label": "carga"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 10 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 30 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 100 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 300 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 700 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 1.200 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 2.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 2.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "paracet#0 — N-acetilcisteína IV (3 bolsas)",
+  "calc": {
+   "t": "nac"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 150 mg + 50 mg + 100 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 450 mg + 150 mg + 300 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1.500 mg + 500 mg + 1.000 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4.500 mg + 1.500 mg + 3.000 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10.500 mg + 3.500 mg + 7.000 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 15.000 mg + 5.000 mg + 10.000 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 15.000 mg + 5.000 mg + 10.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 15.000 mg + 5.000 mg + 10.000 mg"
+   }
+  ]
+ },
+ {
+  "id": "sepsis#3 — Cristaloide balanceado",
+  "calc": {
+   "t": "kg",
+   "lo": 30,
+   "hi": 30,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 30 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 90 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 300 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 900 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2.100 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 3.600 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 6.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 7.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "sepsis#4 — Noradrenalina si PAM < 65",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 1,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–3,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–11,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–37,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–112,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–262,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–450 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–750 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–937,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "foco-sangre#0 — Vancomicina",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "foco-piel#1 — Vancomicina (purulenta o SAMR)",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "foco-nec#1 — + Vancomicina (si riesgo de SAMR o shock)",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "foco-pulm#2 — + Vancomicina (si riesgo de SAMR o shock)",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "foco-nd#1 — + Vancomicina (si riesgo de SAMR o shock)",
+  "calc": {
+   "t": "kg",
+   "lo": 25,
+   "hi": 30,
+   "unit": "mg",
+   "label": "carga",
+   "max": 3000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → carga 25–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → carga 75–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → carga 250–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → carga 750–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → carga 1.750–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → carga 3.000 mg · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → carga 3.000 mg · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "shock#0 — Noradrenalina",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 1,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–3,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–11,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–37,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–112,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–262,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–450 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–750 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–937,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "shock#3 — Dobutamina (hipoperfusión con PAM adecuada y bajo gasto)",
+  "calc": {
+   "t": "kgmin",
+   "lo": 2.5,
+   "hi": 20,
+   "conc": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5–3,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,5–12 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4,5–36 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10,5–84 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 18–144 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 30–240 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 37,5–300 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sri#1 — Ketamina (shock, broncoespasmo)",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–20 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–60 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–140 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–240 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–400 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–500 mg"
+   }
+  ]
+ },
+ {
+  "id": "sri#2 — Etomidato",
+  "calc": {
+   "t": "kg",
+   "lo": 0.3,
+   "hi": 0.3,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,9 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 3 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 9 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 21 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 36 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 60 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 75 mg"
+   }
+  ]
+ },
+ {
+  "id": "sri#3 — Propofol (estable)",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–20 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–60 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–140 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–240 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–400 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–500 mg"
+   }
+  ]
+ },
+ {
+  "id": "sri#5 — Rocuronio",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1.2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–1,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–3,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–12 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–36 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–84 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–144 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–240 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–300 mg"
+   }
+  ]
+ },
+ {
+  "id": "sri#6 — Succinilcolina",
+  "calc": {
+   "t": "kg",
+   "lo": 1.5,
+   "hi": 1.5,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1,5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 4,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 15 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 45 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 105 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 180 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 300 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 375 mg"
+   }
+  ]
+ },
+ {
+  "id": "sri#9 — Fentanilo (pretratamiento opcional)",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 3,
+   "unit": "mcg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–3 mcg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–9 mcg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–30 mcg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–90 mcg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–210 mcg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–360 mcg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–600 mcg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–750 mcg"
+   }
+  ]
+ },
+ {
+  "id": "sedacion#0 — Fentanilo",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.5,
+   "hi": 2,
+   "conc": 10,
+   "unit": "mcg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–0,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–2 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–6 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–14 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–24 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10–40 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5–50 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sedacion#1 — Propofol 1 %",
+  "calc": {
+   "t": "kgmin",
+   "lo": 5,
+   "hi": 50,
+   "conc": 10000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0–0,3 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,1–0,9 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,3–3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 0,9–9 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 2,1–21 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 3,6–36 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 6–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 7,5–75 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sedacion#2 — Dexmedetomidina",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.2,
+   "hi": 1.4,
+   "conc": 4,
+   "unit": "mcg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,4 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–1 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–3,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–10,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–24,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–42 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10–70 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5–87,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sedacion#3 — Midazolam (si propofol no es opción)",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.02,
+   "hi": 0.1,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0–0,1 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,1–0,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,2–1 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 0,6–3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1,4–7 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2,4–12 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4–20 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5–25 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sedacion#4 — Ketamina (adyuvante)",
+  "calc": {
+   "t": "kgh",
+   "lo": 0.1,
+   "hi": 0.5,
+   "conc": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–1,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1–5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3–15 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7–35 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12–60 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20–100 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25–125 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "post-pcr#1 — Noradrenalina para PAM ≥ 65",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 1,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–3,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–11,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–37,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–112,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–262,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–450 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–750 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–937,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#0 — Noradrenalina",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 1,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–3,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–11,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–37,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–112,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–262,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–450 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–750 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–937,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#1 — Adrenalina",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.5,
+   "conc": 16
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–5,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–18,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–56,3 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–131,3 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–225 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–375 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–468,8 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#2 — Vasopresina",
+  "calc": {
+   "t": "min",
+   "lo": 0.03,
+   "hi": 0.03,
+   "conc": 0.2,
+   "unit": "U"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 9–9 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 9–9 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#3 — Fenilefrina",
+  "calc": {
+   "t": "min",
+   "lo": 20,
+   "hi": 200,
+   "conc": 40
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 30–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 30–300 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#4 — Dopamina",
+  "calc": {
+   "t": "kgmin",
+   "lo": 5,
+   "hi": 20,
+   "conc": 1600
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–0,8 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6–2,3 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,9–7,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 5,6–22,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 13,1–52,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 22,5–90 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 37,5–150 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 46,9–187,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#5 — Dobutamina",
+  "calc": {
+   "t": "kgmin",
+   "lo": 2.5,
+   "hi": 20,
+   "conc": 1000
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–1,2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5–3,6 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,5–12 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4,5–36 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10,5–84 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 18–144 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 30–240 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 37,5–300 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#6 — Milrinona",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.375,
+   "hi": 0.75,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,2 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–0,7 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,1–2,3 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3,4–6,8 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7,9–15,8 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 13,5–27 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 22,5–45 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 28,1–56,3 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#7 — Levosimendán",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.05,
+   "hi": 0.2,
+   "conc": 25
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,4–1,4 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,2–4,8 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3,6–14,4 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 8,4–33,6 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 14,4–57,6 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 24–96 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 30–120 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#8 — Nitroglicerina",
+  "calc": {
+   "t": "min",
+   "lo": 5,
+   "hi": 200,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "≈ 1,5–60 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "≈ 1,5–60 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "vasoactivos#9 — Nitroprusiato",
+  "calc": {
+   "t": "kgmin",
+   "lo": 0.3,
+   "hi": 5,
+   "conc": 200
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–1,5 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–4,5 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,9–15 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2,7–45 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 6,3–105 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 10,8–180 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 18–300 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 22,5–375 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#0 — Fentanilo analgesia",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "mcg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1 mcg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3 mcg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–10 mcg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–30 mcg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–70 mcg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–120 mcg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100–200 mcg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125–250 mcg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#1 — Morfina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.05,
+   "hi": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,2–0,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,5–1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 1,5–3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 3,5–7 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 6–12 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 10–20 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 12,5–25 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#2 — Ketamina analgesia",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.3,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1–0,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3–0,9 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1–3 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3–9 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7–21 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12–36 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20–60 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25–75 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#3 — Ketamina sedación para procedimiento",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1.5,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–1,5 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3–4,5 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10–15 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30–45 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70–105 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 120–180 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 200–300 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 250–375 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#4 — Propofol sedación para procedimiento",
+  "calc": {
+   "t": "kg",
+   "lo": 0.5,
+   "hi": 1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,5–1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 1,5–3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 5–10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 15–30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 35–70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 60–120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 100–200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 125–250 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#5 — Midazolam",
+  "calc": {
+   "t": "kg",
+   "lo": 0.02,
+   "hi": 0.05,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0–0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,1–0,2 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 0,2–0,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 0,6–1,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1,4–3,5 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 2,4–6 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 4–10 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5–12,5 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#6 — Cisatracurio",
+  "calc": {
+   "t": "kg",
+   "lo": 0.15,
+   "hi": 0.2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2–0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,5–0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1,5–2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 4,5–6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 10,5–14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 18–24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 30–40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 37,5–50 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#7 — Vecuronio",
+  "calc": {
+   "t": "kg",
+   "lo": 0.1,
+   "hi": 0.1,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 1 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 3 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 7 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 12 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 20 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 25 mg"
+   }
+  ]
+ },
+ {
+  "id": "sedo-guia#8 — Sugammadex",
+  "calc": {
+   "t": "kg",
+   "lo": 16,
+   "hi": 16,
+   "unit": "mg",
+   "label": "rescate"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → rescate 16 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → rescate 48 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → rescate 160 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → rescate 480 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → rescate 1.120 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → rescate 1.920 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → rescate 3.200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → rescate 4.000 mg"
+   }
+  ]
+ },
+ {
+  "id": "mi-fa#3 — Estenosis mitral reumática moderada-grave o prótesis mecánica",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "enoxaparina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → enoxaparina 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → enoxaparina 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → enoxaparina 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → enoxaparina 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → enoxaparina 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → enoxaparina 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → enoxaparina 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → enoxaparina 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "mi-etv#2 — Enoxaparina",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "por dosis"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → por dosis 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → por dosis 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → por dosis 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → por dosis 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → por dosis 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → por dosis 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → por dosis 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → por dosis 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "mi-reversion#1 — Warfarina",
+  "calc": {
+   "t": "ccp"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → INR 2–4: 25 U · 4–6: 35 U · > 6: 50 U"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → INR 2–4: 75 U · 4–6: 105 U · > 6: 150 U"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → INR 2–4: 250 U · 4–6: 350 U · > 6: 500 U"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → INR 2–4: 750 U · 4–6: 1.050 U · > 6: 1.500 U"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → INR 2–4: 1.750 U · 4–6: 2.450 U · > 6: 3.500 U"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → INR 2–4: 2.500 U · 4–6: 3.500 U · > 6: 5.000 U"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → INR 2–4: 2.500 U · 4–6: 3.500 U · > 6: 5.000 U"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → INR 2–4: 2.500 U · 4–6: 3.500 U · > 6: 5.000 U"
+   }
+  ]
+ },
+ {
+  "id": "mi-tb#3 — HRZE en dosis fija combinada",
+  "calc": {
+   "t": "table",
+   "rows": [
+    [
+     40,
+     "2 tabletas/día"
+    ],
+    [
+     55,
+     "3 tabletas/día"
+    ],
+    [
+     71,
+     "4 tabletas/día"
+    ],
+    [
+     999,
+     "5 tabletas/día"
+    ]
+   ]
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2 tabletas/día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 2 tabletas/día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 tabletas/día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 2 tabletas/día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 4 tabletas/día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 5 tabletas/día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 5 tabletas/día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 5 tabletas/día"
+   }
+  ]
+ },
+ {
+  "id": "mi-diarrea#10 — Strongyloides (antes de esteroides en zona endémica)",
+  "calc": {
+   "t": "kg",
+   "lo": 0.2,
+   "hi": 0.2,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,2 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,6 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 6 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 14 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 24 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 40 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 50 mg"
+   }
+  ]
+ },
+ {
+  "id": "mi-dm#3 — Dosis total de insulina",
+  "calc": {
+   "t": "tdd",
+   "lo": 0.4,
+   "hi": 0.5
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → total 0–1 U/día: basal 0–0 U + 0–0 U por comida"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → total 1–2 U/día: basal 1–1 U + 0–0 U por comida"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → total 4–5 U/día: basal 2–3 U + 1–1 U por comida"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → total 12–15 U/día: basal 6–8 U + 2–3 U por comida"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → total 28–35 U/día: basal 14–18 U + 5–6 U por comida"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → total 48–60 U/día: basal 24–30 U + 8–10 U por comida"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → total 80–100 U/día: basal 40–50 U + 13–17 U por comida"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → total 100–125 U/día: basal 50–63 U + 17–21 U por comida"
+   }
+  ]
+ },
+ {
+  "id": "mi-tiroides#4 — Hipotiroidismo primario",
+  "calc": {
+   "t": "kg",
+   "lo": 1.6,
+   "hi": 1.6,
+   "unit": "mcg",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1,6 mcg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 4,8 mcg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 16 mcg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 48 mcg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 112 mcg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 192 mcg /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 320 mcg /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 400 mcg /día"
+   }
+  ]
+ },
+ {
+  "id": "mi-lev#1 — Cristaloide isotónico balanceado",
+  "calc": {
+   "t": "kgh",
+   "lo": 1.04,
+   "hi": 1.25,
+   "conc": 1,
+   "unit": "mL"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1–1,3 mL/h"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3,1–3,8 mL/h"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10,4–12,5 mL/h"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 31,2–37,5 mL/h"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 72,8–87,5 mL/h"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 124,8–150 mL/h"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 208–250 mL/h"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 260–312,5 mL/h"
+   }
+  ]
+ },
+ {
+  "id": "mi-dp#2 — Vancomicina intraperitoneal",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 30,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 15–30 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 45–90 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 150–300 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 450–900 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.050–2.100 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.800–3.600 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 3.000–6.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 3.750–7.500 mg"
+   }
+  ]
+ },
+ {
+  "id": "mi-anemia#11 — Hemolítica autoinmune",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "/día",
+   "max": 80
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 1 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 3 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 10 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 30 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 70 mg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 80 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 80 mg /día · Tope máximo aplicado"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 80 mg /día · Tope máximo aplicado"
+   }
+  ]
+ },
+ {
+  "id": "mi-dengue#2 — Lactato de Ringer",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mL",
+   "label": "bolo 1 h"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → bolo 1 h 10 mL"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → bolo 1 h 30 mL"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → bolo 1 h 100 mL"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → bolo 1 h 300 mL"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → bolo 1 h 700 mL"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → bolo 1 h 1.200 mL"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → bolo 1 h 2.000 mL"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → bolo 1 h 2.500 mL"
+   }
+  ]
+ },
+ {
+  "id": "malaria#1 — Cloroquina (mg de BASE)",
+  "calc": {
+   "t": "kg",
+   "lo": 10,
+   "hi": 10,
+   "unit": "mg",
+   "label": "día 1"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → día 1 10 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → día 1 30 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → día 1 100 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → día 1 300 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → día 1 700 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → día 1 1.200 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → día 1 2.000 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → día 1 2.500 mg"
+   }
+  ]
+ },
+ {
+  "id": "malaria#2 — Primaquina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.25,
+   "hi": 0.25,
+   "unit": "mg",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,3 mg /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,8 mg /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2,5 mg /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 7,5 mg /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 17,5 mg /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 30 mg /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 50 mg /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 62,5 mg /día"
+   }
+  ]
+ },
+ {
+  "id": "malaria#5 — + Primaquina",
+  "calc": {
+   "t": "kg",
+   "lo": 0.25,
+   "hi": 0.25,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 0,3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 0,8 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 2,5 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 7,5 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 17,5 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 30 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 50 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 62,5 mg"
+   }
+  ]
+ },
+ {
+  "id": "malaria#7 — Artesunato",
+  "calc": {
+   "t": "kg",
+   "lo": 2.4,
+   "hi": 2.4,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 2,4 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 7,2 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 24 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 72 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 168 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 288 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 480 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 600 mg"
+   }
+  ]
+ },
+ {
+  "id": "oportunistas#0 — Neumocistosis",
+  "calc": {
+   "t": "kg",
+   "lo": 15,
+   "hi": 20,
+   "unit": "mg TMP",
+   "label": "/día"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 15–20 mg TMP /día"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 45–60 mg TMP /día"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 150–200 mg TMP /día"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 450–600 mg TMP /día"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 1.050–1.400 mg TMP /día"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 1.800–2.400 mg TMP /día"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 3.000–4.000 mg TMP /día"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 3.750–5.000 mg TMP /día"
+   }
+  ]
+ },
+ {
+  "id": "oportunistas#1 — Toxoplasmosis cerebral",
+  "calc": {
+   "t": "kg",
+   "lo": 5,
+   "hi": 5,
+   "unit": "mg TMP",
+   "label": "c/12 h"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → c/12 h 5 mg TMP"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → c/12 h 15 mg TMP"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → c/12 h 50 mg TMP"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → c/12 h 150 mg TMP"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → c/12 h 350 mg TMP"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → c/12 h 600 mg TMP"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → c/12 h 1.000 mg TMP"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → c/12 h 1.250 mg TMP"
+   }
+  ]
+ },
+ {
+  "id": "oportunistas#2 — Meningitis criptocócica",
+  "calc": {
+   "t": "kg",
+   "lo": 1,
+   "hi": 1,
+   "unit": "mg",
+   "label": "anfotericina"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → anfotericina 1 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → anfotericina 3 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → anfotericina 10 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → anfotericina 30 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → anfotericina 70 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → anfotericina 120 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → anfotericina 200 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → anfotericina 250 mg"
+   }
+  ]
+ },
+ {
+  "id": "oportunistas#3 — Histoplasmosis diseminada",
+  "calc": {
+   "t": "kg",
+   "lo": 3,
+   "hi": 3,
+   "unit": "mg"
+  },
+  "casos": [
+   {
+    "pesoKg": null,
+    "esperado": null
+   },
+   {
+    "pesoKg": 1,
+    "esperado": "Verifica el peso · 1 kg → 3 mg"
+   },
+   {
+    "pesoKg": 3,
+    "esperado": "3 kg → 9 mg"
+   },
+   {
+    "pesoKg": 10,
+    "esperado": "10 kg → 30 mg"
+   },
+   {
+    "pesoKg": 30,
+    "esperado": "30 kg → 90 mg"
+   },
+   {
+    "pesoKg": 70,
+    "esperado": "70 kg → 210 mg"
+   },
+   {
+    "pesoKg": 120,
+    "esperado": "120 kg → 360 mg"
+   },
+   {
+    "pesoKg": 200,
+    "esperado": "200 kg → 600 mg"
+   },
+   {
+    "pesoKg": 250,
+    "esperado": "Verifica el peso · 250 kg → 750 mg"
+   }
+  ]
+ }
+]

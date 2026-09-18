@@ -1,0 +1,28 @@
+{
+  // AUTOGENERADO por tools/extract-content.mjs — no editar a mano.
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    // Los módulos de este paquete se importan entre sí (y desde
+    // tools/verify-content.mjs) usando la extensión .ts real en el
+    // especificador, para poder correr directo con Node (type-stripping
+    // nativo, Node >= 22.6) sin paso de build. "bundler" (heredado de
+    // tsconfig.base.json) más este flag lo permiten sin emitir nada raro,
+    // porque noEmit ya está en true.
+    "allowImportingTsExtensions": true,
+    // Las 51 calculadoras preservan calcForm.compute BYTE A BYTE desde
+    // index.html (Function.prototype.toString(), ver extractArrowBody /
+    // buildHelpersTs en este script). Varias definen variables o
+    // sub-funciones locales sin anotar (ej. "const cl=(x,lo,hi)=>..." en
+    // c-crcl, "const add=x=>{...}" en c-news2). No se les puede agregar
+    // anotaciones de tipo sin dejar de ser una copia literal del código
+    // original, asi que se apaga noImplicitAny (heredado de "strict" en
+    // tsconfig.base.json) para todo el paquete. El resto de "strict"
+    // (strictNullChecks, noUncheckedIndexedAccess, etc.) sigue activo, y con
+    // eso la forma de cada ficha (Ficha/Order/CalcSpec/CalcInput) se sigue
+    // verificando en serio: lo que se relaja es solo la inferencia de tipos
+    // dentro del cuerpo de compute(), no la forma del dato.
+    "noImplicitAny": false
+  },
+  "include": ["src"]
+}
