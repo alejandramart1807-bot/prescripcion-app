@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import CalculatorPage from "./pages/CalculatorPage";
 import FichaPage from "./pages/FichaPage";
 import BuscarPage from "./pages/BuscarPage";
+import ActualizacionAviso from "./components/ActualizacionAviso";
 import { DX } from "@tinterno/content";
 
 // Migración de Tinterno al monorepo. Esta app hoy solo renderiza las
@@ -56,6 +57,7 @@ export default function App() {
         </div>
       </header>
       <main id="main">{contenido(route)}</main>
+      <ActualizacionAviso />
     </div>
   );
 }

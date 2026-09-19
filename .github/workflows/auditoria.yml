@@ -38,6 +38,18 @@ jobs:
       - name: Verificación de tipos y build de la web
         run: pnpm --filter web build
 
+      - name: Instalar Chromium para la prueba de PWA
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: PWA — offline y relevo del worker viejo
+        run: |
+          # El worker nuevo tiene que salir en /sw.js para desplazar al que los
+          # usuarios ya tienen instalado. Si sale en otra ruta, el viejo se
+          # queda sirviendo su copia cacheada y nunca reciben una corrección.
+          npx --yes serve -s apps/web/dist -l 8931 &
+          npx --yes wait-on http://localhost:8931 --timeout 30000
+          node tools/audit-pwa.mjs http://localhost:8931
+
       - name: La app en producción no cambió
         run: |
           # index.html es la app que los médicos están usando hoy. Mientras

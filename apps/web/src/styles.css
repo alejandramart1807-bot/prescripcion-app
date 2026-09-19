@@ -237,3 +237,17 @@ table.rt { width: 100%; border-collapse: collapse; font-size: .92rem; }
 table.rt th, table.rt td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 table.rt th { color: var(--text-2); font-size: .78rem; text-transform: uppercase; letter-spacing: .02em; }
 table.rt tr:last-child td { border-bottom: 0; }
+
+/* ---------- aviso de PWA (actualización / listo sin conexión) ---------- */
+.pwa-aviso {
+  position: fixed; left: 50%; bottom: 16px; z-index: 90;
+  display: flex; align-items: center; gap: var(--s3);
+  max-width: calc(100vw - 32px); width: max-content;
+  padding: 10px 12px 10px 16px; border-radius: var(--r-ctl);
+  background: var(--text); color: var(--surface); box-shadow: var(--shadow-up);
+  font-size: .92rem; transform: translateX(-50%);
+}
+.pwa-aviso .btn { flex: none; }
+.pwa-aviso.pwa-aviso-update { background: var(--brand); }
+.pwa-aviso .btn.primary { background: var(--on-brand); color: var(--brand); border-color: var(--on-brand); }
+.pwa-aviso .btn.small { background: transparent; border-color: rgba(255, 255, 255, .4); color: inherit; }

@@ -1,0 +1,14 @@
+{
+  "//": "Solo para el editor: tipos correctos al editar src/sw.ts (lib webworker en vez de DOM). No participa del build ni de `tsc --noEmit` (apps/web/package.json build), que sigue type-checkeando únicamente tsconfig.json.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "WebWorker"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "types": []
+  },
+  "include": ["src/sw.ts"]
+}

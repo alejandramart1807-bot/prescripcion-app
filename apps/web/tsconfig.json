@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "useDefineForClassFields": true,
     "noEmit": true,
-    "types": ["vite/client"],
+    "types": ["vite/client", "vite-plugin-pwa/client"],
     // @tinterno/content y @tinterno/engine se consumen desde su código fuente
     // (workspace:*, sin paso de build), con specifiers que terminan en ".ts"
     // -> hace falta lo mismo que ya declara packages/content/tsconfig.json.
@@ -16,5 +16,10 @@
     // relaja el propio paquete de contenido. El resto de "strict" sigue activo.
     "noImplicitAny": false
   },
-  "include": ["src", "vite.config.ts"]
+  "include": ["src", "vite.config.ts"],
+  // src/sw.ts es el service worker: corre en el scope de un worker (lib
+  // "webworker"), no en el DOM de esta app, y el build de injectManifest lo
+  // compila aparte (esbuild, sin pasar por este tsconfig). Se excluye para
+  // no mezclar libs de tipos; ver tsconfig.sw.json para editarlo con tipos.
+  "exclude": ["src/sw.ts"]
 }
