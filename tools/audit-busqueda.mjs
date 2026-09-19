@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { searchDX as nuevo } from '/Users/jacoboposada/Code/prescripcion-app/apps/web/src/lib/busqueda.ts';
+import { searchDX as nuevo } from '../apps/web/src/lib/busqueda.ts';
 const noop = () => {};
 const mkEl = () => new Proxy(function () {}, {
   get: (t, p) => { if (p === 'value') return ''; if (p === 'hidden' || p === 'checked') return false;
@@ -19,7 +19,10 @@ globalThis.sessionStorage = { getItem: () => null, setItem: noop, removeItem: no
 Object.defineProperty(globalThis, 'navigator', { value: { userAgent: 'node', serviceWorker: { register: () => Promise.resolve() } }, configurable: true });
 globalThis.matchMedia = () => ({ matches: false, addEventListener: noop }); globalThis.addEventListener = noop;
 
-const RAIZ = '/Users/jacoboposada/Code/prescripcion-app';
+import path from 'path';
+// Este archivo se empaqueta con esbuild antes de correr, así que import.meta.url
+// apuntaría al bundle. Se ejecuta siempre con cwd en la raíz del repo.
+const RAIZ = process.cwd();
 const h = fs.readFileSync(`${RAIZ}/index.html`, 'utf8');
 const s = h.indexOf('<script>', h.indexOf('</style>')) + 8;
 const e = h.lastIndexOf('</script>');

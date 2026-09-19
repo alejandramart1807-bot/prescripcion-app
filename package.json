@@ -9,9 +9,16 @@
   "packageManager": "pnpm@12.4.2",
   "scripts": {
     "dev": "pnpm --filter web dev",
-    "build": "pnpm -r --filter=./apps/* --filter=./packages/* build",
+    "build": "pnpm --filter web build",
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r --if-present typecheck",
-    "clean": "pnpm -r --if-present clean"
+    "clean": "pnpm -r --if-present clean",
+    "auditar": "node tools/audit-all.mjs",
+    "linea-base": "node tools/audit-baseline.mjs",
+    "test": "pnpm --filter @tinterno/engine test",
+    "verificar": "pnpm auditar && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
   }
 }

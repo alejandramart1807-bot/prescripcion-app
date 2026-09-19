@@ -1,0 +1,50 @@
+name: Auditoría clínica
+
+# Tinterno calcula dosis de medicamentos. Cualquier cambio que altere una
+# dosis, una dilución o el texto que el médico copia a la historia clínica
+# tiene que ser deliberado y revisado, nunca un efecto colateral.
+#
+# Este flujo compara todo contra la línea base v7.0 congelada en
+# tools/__baseline__/, tomada antes de empezar la migración al monorepo.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  auditoria:
+    name: Arnés completo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Habilitar pnpm
+        run: corepack enable
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Auditoría contra la línea base v7.0
+        run: node tools/audit-all.mjs
+
+      - name: Pruebas del motor de dosis
+        run: pnpm --filter @tinterno/engine test
+
+      - name: Verificación de tipos y build de la web
+        run: pnpm --filter web build
+
+      - name: La app en producción no cambió
+        run: |
+          # index.html es la app que los médicos están usando hoy. Mientras
+          # apps/web no alcance paridad, cualquier cambio ahí debe ser
+          # intencional: este paso obliga a que se note en la revisión.
+          if ! git diff --quiet origin/main -- index.html sw.js manifest.webmanifest 2>/dev/null; then
+            echo "::warning::index.html, sw.js o manifest.webmanifest cambiaron respecto a main. Revísalo con cuidado: es la app en producción."
+          else
+            echo "Sin cambios en la app en producción."
+          fi

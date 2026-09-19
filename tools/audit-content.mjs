@@ -10,7 +10,9 @@
  * 358 fichas a cualquiera de los 8 pesos, esto falla.
  */
 import fs from 'fs';
-const RAIZ = '/Users/jacoboposada/Code/prescripcion-app';
+import { fileURLToPath } from 'url';
+import path from 'path';
+const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const noop = () => {};
 const mkEl = () => new Proxy(function () {}, {

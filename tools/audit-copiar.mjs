@@ -1,8 +1,12 @@
 import fs from 'fs';
-import { DX, GUIDES } from '/Users/jacoboposada/Code/prescripcion-app/packages/content/src/index.ts';
-import { textoParaCopiar, seleccionInicial } from '/Users/jacoboposada/Code/prescripcion-app/apps/web/src/lib/copiarOrdenes.ts';
+import { DX, GUIDES } from '../packages/content/src/index.ts';
+import { textoParaCopiar, seleccionInicial } from '../apps/web/src/lib/copiarOrdenes.ts';
 
-const base = JSON.parse(fs.readFileSync('/Users/jacoboposada/Code/prescripcion-app/tools/__baseline__/v7-0.json', 'utf8'));
+import path from 'path';
+// Este archivo se empaqueta con esbuild antes de correr, así que import.meta.url
+// apuntaría al bundle. Se ejecuta siempre con cwd en la raíz del repo.
+const RAIZ = process.cwd();
+const base = JSON.parse(fs.readFileSync(path.join(RAIZ, 'tools/__baseline__/v7-0.json'), 'utf8'));
 const PESOS = [0, 3, 10, 30, 70, 120, 200];
 
 let idem = 0, soloInfusion = 0, otras = 0;

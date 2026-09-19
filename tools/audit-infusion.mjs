@@ -7,16 +7,19 @@
  */
 import fs from 'fs';
 import { execSync } from 'child_process';
-const RAIZ = '/Users/jacoboposada/Code/prescripcion-app';
+import { fileURLToPath } from 'url';
+import path from 'path';
+const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const h = fs.readFileSync(`${RAIZ}/index.html`, 'utf8');
 const s = h.indexOf('<script>', h.indexOf('</style>')) + 8;
 const e = h.indexOf('/* ================= TINTERNO UI v7 ================= */');
 const DX = eval(h.slice(s, e) + ';DX');
 
-execSync('./packages/engine/node_modules/.bin/tsc -p packages/engine/tsconfig.json --outDir /tmp/eng-inf --declaration false', { cwd: RAIZ, stdio: 'pipe' });
-const { calcular } = await import('/tmp/eng-inf/calc.js');
-const { calcularInfusion, formatearInfusion, esInfusion } = await import('/tmp/eng-inf/infusion.js');
+const SALIDA = path.join(RAIZ, 'node_modules/.cache/engine-audit');
+execSync(`pnpm --filter @tinterno/engine exec tsc -p tsconfig.json --outDir "${SALIDA}" --declaration false`, { cwd: RAIZ, stdio: 'pipe' });
+const { calcular } = await import(path.join(SALIDA, 'calc.js'));
+const { calcularInfusion, formatearInfusion, esInfusion } = await import(path.join(SALIDA, 'infusion.js'));
 
 const PESOS = [null, 3, 10, 30, 70, 120, 200];
 const numerosDe = (t) => (t.match(/[\d.]+,?\d*/g) || []).filter(x => /\d/.test(x));
