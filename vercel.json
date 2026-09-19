@@ -5,7 +5,7 @@
   "//2": "desde main; esto es para ver la migración en un enlace aparte.",
 
   "buildCommand": "pnpm --filter web build",
-  "installCommand": "corepack enable && pnpm install --frozen-lockfile",
+  "installCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack enable && pnpm install --frozen-lockfile",
   "outputDirectory": "apps/web/dist",
   "cleanUrls": false,
   "trailingSlash": false,
