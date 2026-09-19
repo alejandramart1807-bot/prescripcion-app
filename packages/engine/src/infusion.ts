@@ -1,4 +1,4 @@
-import { fmt } from "./format.js";
+import { fmt, fmtPeso } from "./format.js";
 import type { CalcSpec } from "./types.js";
 
 /**
@@ -110,6 +110,6 @@ export function formatearInfusion(inf: Infusion): string {
   // Mismo orden que el motor original: la advertencia de peso va al frente de
   // todo, la de tope va después del "N kg →".
   const conTope = (inf.topeAplicado ? "Tope máximo aplicado · " : "") + cuerpo;
-  const conPeso = inf.kg === null ? conTope : `${inf.kg} kg → ${conTope}`;
+  const conPeso = inf.kg === null ? conTope : `${fmtPeso(inf.kg)} kg → ${conTope}`;
   return (inf.verificarPeso ? "Verifica el peso · " : "") + conPeso;
 }

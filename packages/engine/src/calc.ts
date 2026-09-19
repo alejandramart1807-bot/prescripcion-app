@@ -1,4 +1,4 @@
-import { fmt } from "./format.js";
+import { fmt, fmtPeso } from "./format.js";
 import type { CalcSpec, ResultadoCalculo } from "./types.js";
 
 /**
@@ -12,6 +12,12 @@ import type { CalcSpec, ResultadoCalculo } from "./types.js";
  *
  * Si algo aquí te parece clínicamente cuestionable, NO lo corrijas: repórtalo.
  * Esta capa solo debe reproducir el comportamiento vigente en producción.
+ *
+ * ÚNICA desviación deliberada y aprobada: el peso se imprime con `fmt(kg)`.
+ * El original lo interpolaba crudo, y con pesos decimales producía líneas como
+ * "12.5 kg → 1.125 mg", donde el mismo punto significa decimal en un número y
+ * miles en el otro. Con `fmt` queda "12,5 kg → 1.125 mg": coma para decimales
+ * y punto para miles, como en Colombia. Los pesos enteros no cambian.
  */
 
 /** Regla usada por la UI original (`calcHTML`) para resaltar el resultado. */
@@ -29,7 +35,7 @@ function envolver(texto: string): ResultadoCalculo {
  */
 function calcularCore(c: CalcSpec, kg: number, u: string): string | null {
   if (c.t === "kgmin") {
-    return `${kg} kg → ${fmt((c.lo * kg * 60) / c.conc)}–${fmt((c.hi * kg * 60) / c.conc)} mL/h`;
+    return `${fmtPeso(kg)} kg → ${fmt((c.lo * kg * 60) / c.conc)}–${fmt((c.hi * kg * 60) / c.conc)} mL/h`;
   }
   if (c.t === "kgh") {
     let lo = c.lo * kg;
@@ -43,7 +49,7 @@ function calcularCore(c: CalcSpec, kg: number, u: string): string | null {
     const r =
       (capH ? "Tope máximo aplicado · " : "") +
       (lo === hi ? `${fmt(lo / c.conc)} mL/h (${fmt(lo, 0)} ${u}/h)` : `${fmt(lo / c.conc)}–${fmt(hi / c.conc)} mL/h`);
-    return `${kg} kg → ${r}`;
+    return `${fmtPeso(kg)} kg → ${r}`;
   }
   if (c.t === "kg") {
     let lo = c.lo * kg;
@@ -58,8 +64,8 @@ function calcularCore(c: CalcSpec, kg: number, u: string): string | null {
     const ct = cap ? " · Tope máximo aplicado" : "";
     return (
       (c.label && (c.label.startsWith("/") || c.label.startsWith("en ") || c.label === "total")
-        ? `${kg} kg → ${v} ${c.label}`
-        : `${kg} kg → ${c.label ? c.label + " " : ""}${v}`) + ct
+        ? `${fmtPeso(kg)} kg → ${v} ${c.label}`
+        : `${fmtPeso(kg)} kg → ${c.label ? c.label + " " : ""}${v}`) + ct
     );
   }
   if (c.t === "table") {
@@ -68,30 +74,30 @@ function calcularCore(c: CalcSpec, kg: number, u: string): string | null {
     // index.html (lanzaría al leer row[1] de `undefined`). En los datos
     // reales de las 358 fichas, todas las tablas tienen un último tramo
     // con techo 999, así que no ocurre con pesos humanos plausibles.
-    return `${kg} kg → ${row![1]}`;
+    return `${fmtPeso(kg)} kg → ${row![1]}`;
   }
   if (c.t === "ccp") {
     const f = (unidadPorKg: number, cap: number) => fmt(Math.min(unidadPorKg * kg, cap), 0);
-    return `${kg} kg → INR 2–4: ${f(25, 2500)} U · 4–6: ${f(35, 3500)} U · > 6: ${f(50, 5000)} U`;
+    return `${fmtPeso(kg)} kg → INR 2–4: ${f(25, 2500)} U · 4–6: ${f(35, 3500)} U · > 6: ${f(50, 5000)} U`;
   }
   if (c.t === "tdd") {
     const lo = c.lo * kg;
     const hi = c.hi * kg;
-    return `${kg} kg → total ${fmt(lo, 0)}–${fmt(hi, 0)} U/día: basal ${fmt(lo / 2, 0)}–${fmt(hi / 2, 0)} U + ${fmt(lo / 6, 0)}–${fmt(hi / 6, 0)} U por comida`;
+    return `${fmtPeso(kg)} kg → total ${fmt(lo, 0)}–${fmt(hi, 0)} U/día: basal ${fmt(lo / 2, 0)}–${fmt(hi / 2, 0)} U + ${fmt(lo / 6, 0)}–${fmt(hi / 6, 0)} U por comida`;
   }
   if (c.t === "altacv") {
     const tot = Math.min(0.9 * kg, 90);
     const b = tot * 0.1;
-    return `${kg} kg → total ${fmt(tot)} mg: bolo ${fmt(b)} mg + ${fmt(tot - b)} mg en 60 min`;
+    return `${fmtPeso(kg)} kg → total ${fmt(tot)} mg: bolo ${fmt(b)} mg + ${fmt(tot - b)} mg en 60 min`;
   }
   if (c.t === "nac") {
     const w = Math.min(kg, 100);
-    return `${kg} kg → ${fmt(150 * w, 0)} mg + ${fmt(50 * w, 0)} mg + ${fmt(100 * w, 0)} mg`;
+    return `${fmtPeso(kg)} kg → ${fmt(150 * w, 0)} mg + ${fmt(50 * w, 0)} mg + ${fmt(100 * w, 0)} mg`;
   }
   if (c.t === "alteplase") {
     const a = Math.min(0.75 * kg, 50);
     const b = Math.min(0.5 * kg, 35);
-    return `${kg} kg → 15 mg + ${fmt(a)} mg + ${fmt(b)} mg = ${fmt(15 + a + b)} mg`;
+    return `${fmtPeso(kg)} kg → 15 mg + ${fmt(a)} mg + ${fmt(b)} mg = ${fmt(15 + a + b)} mg`;
   }
   return null;
 }

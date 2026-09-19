@@ -1,5 +1,5 @@
 export { calcular } from "./calc.js";
-export { fmt } from "./format.js";
+export { fmt, fmtPeso } from "./format.js";
 export type {
   CalcSpec,
   CalcKgMin,
