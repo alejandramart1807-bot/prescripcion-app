@@ -17,6 +17,7 @@ import {
 import GuiaFicha from "../components/GuiaFicha";
 import OrdenItem from "../components/OrdenItem";
 import TablaReferencia from "../components/TablaReferencia";
+import "../estilos-impresion.css";
 
 function esFichaRef(d: (typeof DX)[number]): d is FichaRef {
   return "rows" in d && Array.isArray((d as FichaRef).rows);
@@ -34,6 +35,54 @@ function ordenesConPeso(ficha: FichaOrders): number {
   return ficha.orders.filter(
     (o): o is OrderLine => !("cat" in o) && !!o.calc && o.calc.t !== "min" && o.calc.t !== "h",
   ).length;
+}
+
+/** Aviso temporal en el pie de la ficha (igual patrón que `toast()` en index.html, pero local a la página). */
+function useAviso() {
+  const [aviso, setAviso] = useState<string | null>(null);
+  const timeout = useRef<number | undefined>(undefined);
+
+  useEffect(() => () => window.clearTimeout(timeout.current), []);
+
+  function mostrarAviso(msg: string) {
+    setAviso(msg);
+    window.clearTimeout(timeout.current);
+    timeout.current = window.setTimeout(() => setAviso(null), 2200);
+  }
+
+  return { aviso, mostrarAviso };
+}
+
+/**
+ * Enlace canónico de una ficha: `#<id>` (regla 6 del CLAUDE.md), sin
+ * parámetros de búsqueda ni hash previo. Igual que `shareLink()` en
+ * index.html: usa `navigator.share` cuando existe; si no, copia el enlace
+ * al portapapeles y avisa.
+ */
+async function compartirFicha(id: string, nombre: string, mostrarAviso: (msg: string) => void) {
+  const url = `${location.href.split("#")[0]}#${id}`;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: `Tinterno · ${nombre}`, url });
+    } catch {
+      /* el usuario canceló el diálogo de compartir: no es un error que avisar */
+    }
+    return;
+  }
+  const ok = await copiarAlPortapapeles(url);
+  mostrarAviso(ok ? "Enlace copiado" : "No se pudo copiar el enlace");
+}
+
+/**
+ * Imprime la ficha con la evidencia expandida (igual que `doPrint()` +
+ * el listener `beforeprint` de index.html, que también fuerzan
+ * `details.evd` abierto antes de imprimir). `abrirEvidencia` actualiza el
+ * estado de React; se espera un tick a que el DOM se repinte antes de
+ * llamar a `window.print()` para que la evidencia ya salga abierta.
+ */
+function imprimirFicha(abrirEvidencia: () => void) {
+  abrirEvidencia();
+  window.setTimeout(() => window.print(), 50);
 }
 
 interface FichaPageProps {
@@ -73,8 +122,10 @@ export default function FichaPage({ id }: FichaPageProps) {
 }
 
 function FichaRefView({ ficha }: { ficha: FichaRef }) {
+  const { aviso, mostrarAviso } = useAviso();
+
   return (
-    <article className="page" aria-labelledby="ftitle">
+    <article className="page ficha-imprimible" aria-labelledby="ftitle">
       <header className="ficha-head">
         <a className="cf-back" href="#/">
           ← Inicio
@@ -96,7 +147,18 @@ function FichaRefView({ ficha }: { ficha: FichaRef }) {
 
       <Relacionado rel={ficha.rel} />
 
-      <p className="foot">Rangos aproximados de adulto salvo que se indique. Prevalecen los valores de tu laboratorio.</p>
+      <div className="factbar">
+        <button type="button" className="btn" onClick={() => compartirFicha(ficha.id, ficha.name, mostrarAviso)}>
+          Compartir
+        </button>
+        <button type="button" className="btn" onClick={() => imprimirFicha(() => {})}>
+          Imprimir
+        </button>
+      </div>
+
+      <p className="foot" role="status" aria-live="polite">
+        {aviso || "Rangos aproximados de adulto salvo que se indique. Prevalecen los valores de tu laboratorio."}
+      </p>
     </article>
   );
 }
@@ -105,17 +167,17 @@ function FichaOrdersView({ ficha }: { ficha: FichaOrders }) {
   const guide: Guide | undefined = GUIDES[ficha.id] || ficha.g;
   const { peso, fijarPeso } = usarPeso();
   const [seleccion, setSeleccion] = useState<Set<number>>(() => seleccionInicial(ficha));
-  const [aviso, setAviso] = useState<string | null>(null);
-  const avisoTimeout = useRef<number | undefined>(undefined);
+  const { aviso, mostrarAviso } = useAviso();
   const [evidenciaAbierta, setEvidenciaAbierta] = useState(false);
 
-  useEffect(() => () => window.clearTimeout(avisoTimeout.current), []);
-
-  function mostrarAviso(msg: string) {
-    setAviso(msg);
-    window.clearTimeout(avisoTimeout.current);
-    avisoTimeout.current = window.setTimeout(() => setAviso(null), 2200);
-  }
+  // Red de seguridad para Cmd/Ctrl+P y el menú "Imprimir" del navegador, que
+  // no pasan por el botón "Imprimir" (igual que el listener `beforeprint` de
+  // index.html): la evidencia también debe salir abierta si imprimen así.
+  useEffect(() => {
+    const alImprimir = () => setEvidenciaAbierta(true);
+    window.addEventListener("beforeprint", alImprimir);
+    return () => window.removeEventListener("beforeprint", alImprimir);
+  }, []);
 
   function alternarSeleccion(index: number) {
     setSeleccion((prev) => {
@@ -170,7 +232,7 @@ function FichaOrdersView({ ficha }: { ficha: FichaOrders }) {
   const nPeso = ordenesConPeso(ficha);
 
   return (
-    <article className="page" aria-labelledby="ftitle">
+    <article className="page ficha-imprimible" aria-labelledby="ftitle">
       <header className="ficha-head">
         <a className="cf-back" href="#/">
           ← Inicio
@@ -193,10 +255,14 @@ function FichaOrdersView({ ficha }: { ficha: FichaOrders }) {
       </header>
 
       {resumen.length > 0 && (
-        <section className="fsec panel summary" aria-labelledby="h-sum">
-          <h2 id="h-sum" className="sr-only">
-            Resumen de la conducta
-          </h2>
+        // Plegado por defecto a propósito (tarea de paridad #4): el primer
+        // paso, la primera orden, la meta y la alerta principal se repiten
+        // más abajo en sus propias secciones, así que mostrarlo abierto solo
+        // hace pagar scroll extra a quien prescribe en turno. Sirve para
+        // repasar el caso completo de un vistazo — de ahí que se conserve,
+        // solo que a un toque de distancia en vez de open por defecto.
+        <details className="fsec panel summary">
+          <summary>Resumen de la conducta</summary>
           <dl>
             {resumen.map(([k, v]) => (
               <div key={k}>
@@ -205,7 +271,7 @@ function FichaOrdersView({ ficha }: { ficha: FichaOrders }) {
               </div>
             ))}
           </dl>
-        </section>
+        </details>
       )}
 
       {nPeso > 0 && (
@@ -331,7 +397,10 @@ function FichaOrdersView({ ficha }: { ficha: FichaOrders }) {
             ? "Selecciona al menos una orden"
             : `Copiar ${nSel}${nSel !== total ? ` de ${total}` : ""} ${nSel === 1 ? "orden" : "órdenes"}`}
         </button>
-        <button type="button" className="btn" onClick={() => window.print()}>
+        <button type="button" className="btn" onClick={() => compartirFicha(ficha.id, ficha.name, mostrarAviso)}>
+          Compartir
+        </button>
+        <button type="button" className="btn" onClick={() => imprimirFicha(() => setEvidenciaAbierta(true))}>
           Imprimir
         </button>
       </div>

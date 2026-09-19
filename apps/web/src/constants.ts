@@ -11,3 +11,15 @@ export const FOCUSED_MODE_THRESHOLD = 8;
 
 /** Número máximo de opciones de un campo `sel` para mostrarlo como chips en vez de desplegable. */
 export const CHIP_MAX_OPTIONS = 5;
+
+/**
+ * Versión de la app y fecha de revisión de guías, mostradas en el descargo
+ * de responsabilidad de "Cómo funciona Tinterno" (`AcercaPage`).
+ *
+ * Mismos valores que `VERSION`, `REV` y `REV_LONG` en index.html (raíz):
+ * `const REV="sep. 2026", REV_LONG="17 de septiembre de 2026", VERSION="7.0";`
+ * Al publicar una versión nueva, actualízalos aquí y allá.
+ */
+export const VERSION = "7.0";
+export const REV = "sep. 2026";
+export const REV_LONG = "17 de septiembre de 2026";

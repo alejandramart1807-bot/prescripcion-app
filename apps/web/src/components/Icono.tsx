@@ -4,6 +4,7 @@ export type NombreIcono =
   | "star"
   | "starFill"
   | "right"
+  | "left"
   | "pulse"
   | "bed"
   | "steth"
@@ -11,7 +12,12 @@ export type NombreIcono =
   | "calc"
   | "flask"
   | "scale"
-  | "info";
+  | "info"
+  | "home"
+  | "copy"
+  | "more"
+  | "panel"
+  | "share";
 
 /**
  * Iconos de trazo 2 (estilo Lucide), igual que el objeto `IP` de index.html
@@ -53,6 +59,49 @@ export default function Icono({ nombre, className }: { nombre: NombreIcono; clas
       return (
         <svg {...svgProps}>
           <path d="m9 18 6-6-6-6" />
+        </svg>
+      );
+    case "left":
+      return (
+        <svg {...svgProps}>
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      );
+    case "home":
+      return (
+        <svg {...svgProps}>
+          <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />
+        </svg>
+      );
+    case "copy":
+      return (
+        <svg {...svgProps}>
+          <rect x="9" y="9" width="12" height="12" rx="2" />
+          <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" />
+        </svg>
+      );
+    case "more":
+      return (
+        <svg {...svgProps}>
+          <circle cx="12" cy="5" r="1.2" />
+          <circle cx="12" cy="12" r="1.2" />
+          <circle cx="12" cy="19" r="1.2" />
+        </svg>
+      );
+    case "panel":
+      return (
+        <svg {...svgProps}>
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M9 3v18" />
+        </svg>
+      );
+    case "share":
+      return (
+        <svg {...svgProps}>
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
         </svg>
       );
     case "pulse":

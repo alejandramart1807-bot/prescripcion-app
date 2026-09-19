@@ -102,3 +102,27 @@ export function usarRecientes(): string[] {
   }, []);
   return recientes;
 }
+
+/* ---------- barra lateral (colapso en escritorio) ---------- */
+
+/**
+ * Estado de la barra lateral (`renderSidebar` en index.html): igual clave
+ * (`tinterno-sb`) y mismos valores en texto ("on"/"off") que la v7, para que
+ * la preferencia se lea igual si algún día conviven ambas apps en el mismo
+ * navegador. Colapsada por defecto solo si el valor guardado es "off".
+ */
+export function usarBarraLateral(): { colapsada: boolean; alternar: () => void } {
+  const [colapsada, setColapsada] = useState<boolean>(
+    () => leer<string>(local(), CLAVES.barraLateral, "on") === "off",
+  );
+
+  const alternar = useCallback(() => {
+    setColapsada((previa) => {
+      const siguiente = !previa;
+      escribir(local(), CLAVES.barraLateral, siguiente ? "off" : "on");
+      return siguiente;
+    });
+  }, []);
+
+  return { colapsada, alternar };
+}

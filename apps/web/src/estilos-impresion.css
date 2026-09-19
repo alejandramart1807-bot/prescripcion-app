@@ -1,0 +1,72 @@
+/**
+ * Hoja de estilos de impresión de la ficha (`FichaPage.tsx`).
+ *
+ * Uso real: los médicos imprimen protocolos para pegarlos en la pared del
+ * servicio (CLAUDE.md, tarea de paridad #3). Debe salir SOLO el contenido
+ * clínico — sin encabezado de la app, barra lateral, barra inferior ni
+ * botones — legible en blanco y negro.
+ *
+ * Aísla con el truco clásico de "solo esto es visible" en vez de listar
+ * selectores del header/barra lateral/barra inferior: esos componentes los
+ * construye otro agente en paralelo y sus nombres de clase pueden cambiar,
+ * así que en vez de adivinarlos ocultamos todo el árbol y solo mostramos
+ * `.ficha-imprimible` (marcada en FichaPage.tsx).
+ */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .ficha-imprimible,
+  .ficha-imprimible * {
+    visibility: visible;
+  }
+
+  .ficha-imprimible {
+    position: absolute;
+    inset: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0 8mm;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Controles sin sentido en papel: volver, seleccionar, copiar, compartir,
+     imprimir, cambiar/ingresar el peso. */
+  .ficha-imprimible .cf-back,
+  .ficha-imprimible .factions,
+  .ficha-imprimible .evstrip button,
+  .ficha-imprimible .oh-sel,
+  .ficha-imprimible .factbar,
+  .ficha-imprimible .ord input[type="checkbox"],
+  .ficha-imprimible .ord .cp,
+  .ficha-imprimible .calc-need,
+  .ficha-imprimible .calc-need-form,
+  .ficha-imprimible .wnote-top button {
+    display: none !important;
+  }
+
+  .ficha-imprimible .ord {
+    break-inside: avoid;
+    padding-left: 0;
+  }
+
+  .ficha-imprimible .fsec,
+  .ficha-imprimible .box {
+    break-inside: avoid-page;
+  }
+
+  /* La evidencia se fuerza abierta antes de imprimir (ver FichaPage.tsx);
+     el <summary> queda como título de la sección impresa. */
+  .ficha-imprimible details.evd summary {
+    cursor: default;
+    font-weight: 700;
+  }
+
+  .ficha-imprimible .badge,
+  .ficha-imprimible .box {
+    border: 1px solid #999 !important;
+    box-shadow: none !important;
+  }
+}
