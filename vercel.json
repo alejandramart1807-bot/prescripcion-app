@@ -1,12 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
 
-  "//": "FASE 1 (actual): se despliega la app v7.0 que funciona, desde la raíz, sin build.",
-  "//2": "FASE 2: cuando apps/web alcance paridad, cambiar a:",
-  "//3": "  buildCommand: 'pnpm --filter web build', installCommand: 'pnpm install', outputDirectory: 'apps/web/dist'",
+  "//": "Despliega apps/web (Vite + React). La app v7.x de la raíz sigue en Netlify",
+  "//2": "desde main; esto es para ver la migración en un enlace aparte.",
 
-  "buildCommand": null,
-  "outputDirectory": ".",
+  "buildCommand": "pnpm --filter web build",
+  "installCommand": "corepack enable && pnpm install --frozen-lockfile",
+  "outputDirectory": "apps/web/dist",
   "cleanUrls": false,
   "trailingSlash": false,
 
@@ -19,6 +19,7 @@
       ]
     },
     {
+      "//": "Los assets llevan hash en el nombre, así que no pueden quedar obsoletos.",
       "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
